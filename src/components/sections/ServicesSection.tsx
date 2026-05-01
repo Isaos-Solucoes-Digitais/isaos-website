@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { ServiceCard } from '@/components/ui/ServiceCard'
-import { Code2, Smartphone, Brain, Cloud, BarChart3, Layers } from 'lucide-react'
+import { Code2, Smartphone, Brain, Cctv, ShieldCheck, MonitorCheck } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { SectionWrapper } from '@/components/common/SectionWrapper'
 
@@ -23,19 +23,19 @@ const services = [
     description: 'Soluções de inteligência artificial e automação de processos que reduzem custos operacionais e aumentam a eficiência do seu negócio.',
   },
   {
-    icon: <Cloud size={22} />,
-    title: 'Cloud & DevOps',
-    description: 'Arquitectura de nuvem escalável, pipelines CI/CD e gestão de infraestrutura para garantir disponibilidade máxima e performance óptima.',
+    icon: <Cctv size={22} />,
+    title: 'Segurança Electrônica',
+    description: 'Proteja o seu espaço com sistemas modernos de vigilância, incluindo câmeras (CCTV), cercas elétricas e monitoramento inteligente.',
   },
   {
-    icon: <BarChart3 size={22} />,
-    title: 'Business Intelligence',
-    description: 'Dashboards interactivos e relatórios avançados que transformam dados em decisões estratégicas para o crescimento do seu negócio.',
+    icon: <ShieldCheck size={22} />,
+    title: 'Segurança Informática (Cybersecurity)',
+    description: 'Proteja o seu negócio com soluções licenciadas de segurança: antivírus corporativo, backup automatizado e ferramentas avançadas contra ameaças digitais.',
   },
   {
-    icon: <Layers size={22} />,
-    title: 'Consultoria Digital',
-    description: 'Estratégia e consultoria tecnológica personalizada para alinhar a transformação digital da sua empresa com os seus objectivos de negócio.',
+    icon: <MonitorCheck size={22} />,
+    title: 'Software de Gestão',
+    description: 'Otimize a gestão do seu negócio com softwares licenciados para controle de vendas, estoque, finanças e operações.',
   },
 ]
 
@@ -58,7 +58,7 @@ export default function ServicesSection() {
           <span className="gradient-text-blue">desafio digital</span>
         </h2>
         <p className="max-w-xl mx-auto text-slate-500 font-body text-lg leading-relaxed">
-          Combinamos expertise técnica com pensamento estratégico para entregar soluções que fazem a diferença no mercado angolano e africano.
+          Combinamos expertise técnica com pensamento estratégico para entregar soluções que fazem a diferença no mercado angolano.
         </p>
       </motion.div>
 

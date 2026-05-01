@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import SectionWrapper from '@/components/ui/SectionWrapper'
+import { SectionWrapper } from '@/components/common/SectionWrapper'
 import CtaSection from '@/components/sections/CtaSection'
 import { Heart, Rocket, Eye, Users } from 'lucide-react'
 
