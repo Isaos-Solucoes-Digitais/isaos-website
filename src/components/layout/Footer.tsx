@@ -5,10 +5,11 @@ const services = [
   { label: 'Desenvolvimento Web', href: '/services#web' },
   { label: 'Apps Mobile', href: '/services#mobile' },
   { label: 'Automação & IA', href: '/services#ai' },
-  { label: 'Cloud & DevOps', href: '/services#cloud' },
-  { label: 'Consultoria Digital', href: '/services#consulting' },
+  { label: 'CyberSegurança', href: '/services#cloud' },
+  { label: 'Segurança Electrônica', href: '/services#consulting' },
+  { label: 'Software de Gestão', href: '/services#consulting' },
 ]
-
+ 
 const company = [
   { label: 'Sobre Nós', href: '/about' },
   { label: 'Portfólio', href: '/portfolio' },
