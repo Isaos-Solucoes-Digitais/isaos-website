@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import Button from '@/components/ui/Button'
+import { Button } from '@/components/ui/Button'
 import { ArrowRight, Zap, Shield, Globe } from 'lucide-react'
 
 const badges = [
@@ -11,9 +11,9 @@ const badges = [
 ]
 
 const stats = [
-  { value: '50+', label: 'Projectos entregues' },
-  { value: '98%', label: 'Clientes satisfeitos' },
-  { value: '5+', label: 'Anos de experiência' },
+  { value: '10+', label: 'Projectos entregues' },
+  { value: '100%', label: 'Compromisso com Qualidade' },
+  { value: '15+', label: 'Clientes satisfeitos' }, 
 ]
 
 export default function HeroSection() {
@@ -54,9 +54,9 @@ export default function HeroSection() {
           transition={{ duration: 0.7, delay: 0.1 }}
           className="font-sans font-800 text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight leading-[0.95] mb-6"
         >
-          <span className="text-white">Tecnologia</span>
+          <span className="text-white">Soluções digitais</span>
           <br />
-          <span className="gradient-text">que Transforma</span>
+          <span className="gradient-text">que Transformam</span>
           <br />
           <span className="text-white">Negócios</span>
         </motion.h1>
@@ -68,8 +68,8 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 0.25 }}
           className="max-w-2xl mx-auto text-slate-400 text-lg sm:text-xl font-body leading-relaxed mb-10"
         >
-          Desenvolvemos soluções digitais inovadoras que impulsionam o crescimento da sua empresa.
-          Da ideia ao lançamento, entregamos resultados que superam expectativas.
+          Desenvolvemos desde soluções inovadoras à proteção contra ameaças digitais que impulsionam o crescimento da sua empresa.
+          Nós entregamos inovação, segurança e eficiência com resultados que superam expectativas.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -80,7 +80,7 @@ export default function HeroSection() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
         >
           <Button href="/contact" size="lg">
-            Solicitar Orçamento Gratuito
+            Solicitar Orçamento
             <ArrowRight size={18} />
           </Button>
           <Button
@@ -137,7 +137,7 @@ export default function HeroSection() {
         transition={{ delay: 1.5 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
-        <span className="text-slate-600 text-xs font-body tracking-widest uppercase">Scroll</span>
+        
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ repeat: Infinity, duration: 1.5 }}

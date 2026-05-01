@@ -1,9 +1,10 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import SectionWrapper from '@/components/ui/SectionWrapper'
-import Button from '@/components/ui/Button'
+import { SectionWrapper } from '@/components/common/SectionWrapper'
+import { Button } from '@/components/ui/Button'
 import CtaSection from '@/components/sections/CtaSection'
+
 import {
   Code2, Smartphone, Brain, Cloud, BarChart3, Layers,
   CheckCircle, ArrowRight

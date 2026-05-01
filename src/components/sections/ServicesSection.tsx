@@ -1,10 +1,10 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import ServiceCard from '@/components/ui/ServiceCard'
+import { ServiceCard } from '@/components/ui/ServiceCard'
 import { Code2, Smartphone, Brain, Cloud, BarChart3, Layers } from 'lucide-react'
-import Button from '@/components/ui/Button'
-import SectionWrapper from '@/components/ui/SectionWrapper'
+import { Button } from '@/components/ui/Button'
+import { SectionWrapper } from '@/components/common/SectionWrapper'
 
 const services = [
   {

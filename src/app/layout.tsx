@@ -3,7 +3,7 @@ import { Syne, DM_Sans } from 'next/font/google'
 import '../styles/globals.css'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
-import WhatsAppButton from '@/components/ui/WhatsAppButton'
+import { WhatsAppButton } from '@/components/common/WhatsAppButton'
 
 const syne = Syne({
   subsets: ['latin'],

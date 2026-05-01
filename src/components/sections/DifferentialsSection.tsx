@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import SectionWrapper from '@/components/ui/SectionWrapper'
+import { SectionWrapper } from '@/components/common/SectionWrapper'
 import { Target, Clock, Users, Award, Lightbulb, HeartHandshake } from 'lucide-react'
 
 const differentials = [
