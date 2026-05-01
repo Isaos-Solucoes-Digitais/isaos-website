@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import Button from '@/components/ui/Button'
+import { Button } from '@/components/ui/Button'
 import { Send, CheckCircle } from 'lucide-react'
 
 interface FormState {
@@ -25,8 +25,9 @@ const services = [
   'Desenvolvimento Web',
   'Aplicação Mobile',
   'Automação & Inteligência Artificial',
-  'Cloud & DevOps',
-  'Consultoria Digital',
+  'Cybersegurança',
+  'Segurança Eletrônica',
+  'Software de Gestão',
   'Outro',
 ]
 

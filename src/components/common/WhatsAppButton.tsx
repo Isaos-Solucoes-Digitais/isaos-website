@@ -2,7 +2,8 @@
 
 import { motion } from 'framer-motion'
 
-export default function WhatsAppButton() {
+export const WhatsAppButton = () => {
+  
   return (
     <motion.a
       href="https://wa.me/244923000000?text=Olá! Vim do website da ISAOS e gostaria de mais informações."

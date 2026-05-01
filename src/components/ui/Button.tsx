@@ -14,7 +14,7 @@ interface ButtonProps {
   external?: boolean
 }
 
-export default function Button({
+export const Button = ({
   children,
   href,
   onClick,
@@ -24,7 +24,7 @@ export default function Button({
   type = 'button',
   disabled,
   external,
-}: ButtonProps) {
+}: ButtonProps) => {
   const base =
     'inline-flex items-center justify-center gap-2 font-sans font-600 rounded-xl tracking-tight transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-900 disabled:opacity-50 disabled:pointer-events-none select-none'
 
