@@ -34,12 +34,12 @@ export default function CtaSection() {
           </h2>
 
           <p className="text-slate-400 text-xl font-body leading-relaxed mb-10 max-w-2xl mx-auto">
-            Agende uma consulta gratuita com a nossa equipa e descubra como a tecnologia certa pode acelerar o crescimento da sua empresa.
+            Descubra como a tecnologia certa pode acelerar o crescimento da sua empresa de forma segura e confiável.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button href="/contact" size="lg">
-              Iniciar Projecto Agora
+              Solicitar Orçamento Agora
               <ArrowRight size={18} />
             </Button>
             <Button
@@ -53,7 +53,7 @@ export default function CtaSection() {
           </div>
 
           <p className="mt-8 text-slate-600 text-sm font-body">
-            Consulta inicial gratuita · Sem compromisso · Resposta em 24h
+            Suporte especializado · Qualidade · Resposta em 24h
           </p>
         </motion.div>
       </div>
