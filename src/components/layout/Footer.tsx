@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Mail, MapPin, Phone, Linkedin, Twitter, Instagram } from 'lucide-react'
 
 const services = [
@@ -9,7 +10,7 @@ const services = [
   { label: 'Segurança Electrônica', href: '/services#consulting' },
   { label: 'Software de Gestão', href: '/services#consulting' },
 ]
- 
+
 const company = [
   { label: 'Sobre Nós', href: '/about' },
   { label: 'Portfólio', href: '/portfolio' },
@@ -33,17 +34,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-3 mb-5">
-              <div className="relative w-9 h-9 flex-shrink-0">
-                <div className="absolute inset-0 bg-brand-500 rounded-lg rotate-45" />
-                <div className="absolute inset-1 bg-accent-400 rounded-md rotate-12" />
-                <span className="absolute inset-0 flex items-center justify-center text-white font-sans font-bold text-sm z-10">
-                  IS
-                </span>
-              </div>
-              <span className="font-sans font-700 text-white text-xl tracking-tight">
-              ISAOS Cybersecurity Solutions
-              </span>
+            <Link href="/" className="flex items-center gap-3 mb-2 group">
+              <Image
+                src="/logos/logo4-removebg-preview.png"
+                alt="ISAOS Soluções Digitais"
+                width={150}
+                height={50} 
+                className="object-contain group-hover:scale-105 transition-transform duration-300"
+              />
             </Link>
             <p className="text-slate-500 text-sm leading-relaxed mb-6 font-body">
               Transformamos ideias em soluções digitais de alto impacto. A tecnologia ao serviço do crescimento do seu negócio.
