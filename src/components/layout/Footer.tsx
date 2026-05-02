@@ -139,7 +139,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-slate-600 text-xs font-body">
-            © {new Date().getFullYear()} ISAOS Cybersecurity Solutions. Todos os direitos reservados.
+            © {new Date().getFullYear()} ISAOS Soluções Digitais. Todos os direitos reservados.
           </p>
           <div className="flex items-center gap-6">
             <Link href="#" className="text-slate-600 hover:text-slate-400 text-xs font-body transition-colors">

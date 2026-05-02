@@ -13,7 +13,7 @@ const values = [
   },
   {
     icon: Rocket,
-    title: 'Inovação',
+    title: 'Inovação Contínua',
     description: 'Adoptamos continuamente novas tecnologias para manter os nossos clientes na vanguarda.',
   },
   {
@@ -29,13 +29,14 @@ const values = [
 ]
 
 const team = [
-  { name: 'Isaac Sebastião', role: 'CEO & Co-fundador', initial: 'IS', color: 'from-brand-500 to-brand-700' },
-  { name: 'Ana Oliveira', role: 'CTO', initial: 'AO', color: 'from-accent-500 to-accent-700' },
+  { name: 'Osvaldo João', role: 'CEO & Co-fundador', initial: 'OJ', color: 'from-brand-500 to-brand-700' },
+  { name: 'Dedaldino Daniel', role: 'CTO & Tech Lead', initial: 'DD', color: 'from-accent-500 to-accent-700' },
   { name: 'Carlos Neto', role: 'Lead Designer', initial: 'CN', color: 'from-purple-500 to-purple-700' },
   { name: 'Beatriz Sousa', role: 'Head of Engineering', initial: 'BS', color: 'from-amber-500 to-amber-700' },
 ]
 
-export default function AboutContent() {
+export const About = () => {
+
   return (
     <>
       {/* Hero */}
@@ -60,10 +61,11 @@ export default function AboutContent() {
               <span className="gradient-text">da tecnologia</span>
             </h1>
             <p className="text-slate-400 text-xl font-body leading-relaxed">
-              Nascemos em Luanda com uma missão clara: democratizar o acesso a soluções digitais de qualidade internacional para empresas angolanas e africanas.
+              A ISAOS Soluções Digitais nasceu com o objetivo de oferecer soluções tecnológicas acessíveis,
+              seguras e eficientes para pessoas e empresas. 
             </p>
           </motion.div>
-        </div>
+        </div> 
       </section>
 
       {/* Story */}
@@ -82,13 +84,18 @@ export default function AboutContent() {
             </h2>
             <div className="space-y-4 text-slate-400 font-body leading-relaxed">
               <p>
-                A ISAOS foi fundada em 2019 por um grupo de engenheiros angolanos que partilhavam uma visão: criar uma empresa de tecnologia de classe mundial em solo africano.
+              A ISAOS Soluções Digitais nasceu com o objetivo de oferecer soluções tecnológicas acessíveis,
+              seguras e eficientes para pessoas e empresas.
               </p>
               <p>
-                Começámos com pequenos projectos para startups locais, mas rapidamente crescemos para servir empresas de médio e grande porte em Angola e além-fronteiras.
+                Desde o início, focamos em desenvolvimento web, 
+                segurança digital e fornecimento de softwares essenciais, ajudando nossos clientes a construir,
+                proteger e otimizar sua presença no ambiente digital.
               </p>
               <p>
-                Hoje, somos reconhecidos como uma das empresas de desenvolvimento de software mais inovadoras de Angola, com um portfólio diversificado que inclui plataformas fintech, sistemas de saúde, e-commerce e soluções empresariais.
+                Ao longo do tempo, evoluímos para uma abordagem integrada, combinando tecnologia,
+                segurança e gestão, sempre com o compromisso de entregar resultados reais e soluções que fazem a
+                diferença no dia a dia dos nossos clientes.
               </p>
             </div>
           </motion.div>
@@ -101,9 +108,9 @@ export default function AboutContent() {
           >
             {[
               { number: '2019', label: 'Ano de fundação' },
-              { number: '50+', label: 'Projectos entregues' },
-              { number: '20+', label: 'Clientes activos' },
-              { number: '15+', label: 'Especialistas na equipa' },
+              { number: '10+', label: 'Projectos entregues' },
+              { number: '15+', label: 'Clientes activos' },
+              { number: '5+', label: 'Especialistas na equipa' },
             ].map(({ number, label }) => (
               <div
                 key={label}
@@ -131,7 +138,8 @@ export default function AboutContent() {
             </div>
             <h3 className="font-sans font-700 text-white text-2xl mb-4">Missão</h3>
             <p className="text-slate-400 font-body leading-relaxed">
-              Desenvolver soluções digitais inovadoras e acessíveis que permitam às empresas angolanas e africanas competir a nível global, utilizando tecnologia como alavanca de crescimento sustentável.
+              Fornecer soluções tecnológicas seguras, modernas e eficientes, ajudando pessoas e empresas a
+              crescerem e se protegerem no ambiente digital.
             </p>
           </motion.div>
 
@@ -147,7 +155,8 @@ export default function AboutContent() {
             </div>
             <h3 className="font-sans font-700 text-white text-2xl mb-4">Visão</h3>
             <p className="text-slate-400 font-body leading-relaxed">
-              Ser reconhecida até 2030 como a empresa de tecnologia de referência em África, criando um ecossistema digital robusto que contribua para a transformação económica e social do continente.
+              Ser uma referência em soluções digitais e segurança tecnológica, reconhecida pela qualidade,
+              inovação e confiança.
             </p>
           </motion.div>
         </div>
