@@ -4,7 +4,30 @@ import { motion } from 'framer-motion'
 import { SectionWrapper } from '@/components/common/SectionWrapper'
 import ContactForm from '@/components/ui/ContactForm'
 import { MapPin, MessageCircle } from 'lucide-react'
-import { contactInfoData } from '@/data/contacts'
+import { Mail, Phone, Clock } from 'lucide-react'
+
+export const contactInfoData = [
+  {
+    icon: MapPin,
+    title: 'Localização',
+    lines: ['Viana, Luanda','Angola'],
+  },
+  {
+    icon: Mail,
+    title: 'Email',
+    lines: ['info@isaos.ao', 'projetos@isaos.ao'],
+  },
+  {
+    icon: Phone,
+    title: 'Telefone',
+    lines: ['+244 923 000 000', '+244 957 000 000'],
+  },
+  {
+    icon: Clock,
+    title: 'Horário',
+    lines: ['Seg–Sex: 8h às 18h', 'Sáb: 9h às 13h'],
+  },
+]
 
 export function Contact() {
   return (
