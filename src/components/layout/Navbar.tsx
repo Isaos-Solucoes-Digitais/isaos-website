@@ -48,7 +48,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-3 group">
             <div className="relative overflow-visible">
               <Image
-                src="/logos/logo3-removebg-preview.png"
+                src="/logos/logo-horizontal.png"
                 alt="ISAOS Soluções Digitais"
                 width={240}
                 height={100}

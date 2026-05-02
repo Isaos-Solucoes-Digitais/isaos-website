@@ -36,7 +36,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-2 group">
               <Image
-                src="/logos/logo4-removebg-preview.png"
+                src="/logos/logo-vertical.png"
                 alt="ISAOS Soluções Digitais"
                 width={150}
                 height={50} 
