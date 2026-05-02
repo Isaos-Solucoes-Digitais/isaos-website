@@ -3,32 +3,10 @@
 import { motion } from 'framer-motion'
 import { SectionWrapper } from '@/components/common/SectionWrapper'
 import ContactForm from '@/components/ui/ContactForm'
-import { Mail, MapPin, Phone, Clock, MessageCircle } from 'lucide-react'
+import { MapPin, MessageCircle } from 'lucide-react'
+import { contactInfoData } from '@/data/contacts'
 
-const contactInfo = [
-  {
-    icon: MapPin,
-    title: 'Localização',
-    lines: ['Talatona, Luanda', 'Angola'],
-  },
-  {
-    icon: Mail,
-    title: 'Email',
-    lines: ['info@isaos.ao', 'projetos@isaos.ao'],
-  },
-  {
-    icon: Phone,
-    title: 'Telefone',
-    lines: ['+244 923 000 000', '+244 912 000 000'],
-  },
-  {
-    icon: Clock,
-    title: 'Horário',
-    lines: ['Seg–Sex: 8h às 18h', 'Sáb: 9h às 13h'],
-  },
-]
-
-export default function ContactContent() {
+export function Contact() {
   return (
     <>
       {/* Hero */}
@@ -75,7 +53,7 @@ export default function ContactContent() {
               </p>
             </div>
 
-            {contactInfo.map(({ icon: Icon, title, lines }) => (
+            {contactInfoData.map(({ icon: Icon, title, lines }) => (
               <div key={title} className="flex gap-4 p-5 rounded-2xl border border-white/5 bg-dark-800">
                 <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-400">
                   <Icon size={18} />
@@ -91,7 +69,7 @@ export default function ContactContent() {
 
             {/* WhatsApp CTA */}
             <a
-              href="https://wa.me/244923000000?text=Olá ISAOS! Gostaria de falar sobre um projecto."
+              href="https://wa.me/918790807784?text=Olá ISAOS! Gostaria de falar sobre um projecto."
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-4 p-5 rounded-2xl border border-green-500/20 bg-green-500/5 hover:bg-green-500/10 transition-colors group"
@@ -103,7 +81,7 @@ export default function ContactContent() {
                 <div className="font-sans font-700 text-white text-sm group-hover:text-green-300 transition-colors">
                   Falar no WhatsApp
                 </div>
-                <div className="text-slate-500 text-xs font-body">Resposta rápida · +244 923 000 000</div>
+                <div className="text-slate-500 text-xs font-body">Resposta rápida · +91 87908 07784</div>
               </div>
             </a>
           </motion.div>
@@ -137,7 +115,9 @@ export default function ContactContent() {
           <h2 className="font-sans font-800 text-3xl text-white tracking-tight">
             Onde estamos
           </h2>
-          <p className="text-slate-500 font-body mt-2">Talatona, Luanda · Angola</p>
+          <p className="text-slate-500 font-body mt-2">
+          Prédio No 20, apartamento 8, Vila de Viana, próximo dos Bombeiros, Viana, Luanda
+             · Angola</p>
         </motion.div>
 
         <div className="relative h-80 rounded-3xl overflow-hidden border border-white/5 bg-dark-800">
@@ -148,10 +128,10 @@ export default function ContactContent() {
             </div>
             <div className="text-center">
               <div className="font-sans font-700 text-white mb-1">ISAOS Soluções Digitais</div>
-              <div className="text-slate-500 text-sm font-body">Talatona, Luanda, Angola</div>
+              <div className="text-slate-500 text-sm font-body">Viana, Luanda, Angola</div>
             </div>
             <a
-              href="https://maps.google.com/?q=Talatona,Luanda,Angola"
+              href="https://maps.google.com/?q=Viana,Luanda,Angola"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-2 px-5 py-2 rounded-xl border border-brand-500/30 text-brand-400 text-sm font-sans font-600 hover:bg-brand-500/10 transition-colors"
