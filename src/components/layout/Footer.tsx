@@ -109,7 +109,7 @@ export default function Footer() {
                 <span className="text-slate-500 text-sm font-body">
                   Luanda, Angola
                   <br />
-                  Talatona, Sul do Kwanza
+                  Viana, Vila de Viana
                 </span>
               </li>
               <li className="flex items-center gap-3">
