@@ -84,7 +84,7 @@ export default function HeroSection() {
             <ArrowRight size={18} />
           </Button>
           <Button
-            href="https://wa.me/244923000000?text=Olá ISAOS! Gostaria de falar sobre um projecto."
+            href="https://wa.me/918790807784?text=Olá ISAOS! Gostaria de falar sobre um projecto."
             variant="secondary"
             size="lg"
             external
