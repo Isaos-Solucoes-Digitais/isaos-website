@@ -2,8 +2,8 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import SectionWrapper from '@/components/ui/SectionWrapper'
-import Button from '@/components/ui/Button'
+import { SectionWrapper } from '@/components/common/SectionWrapper'
+import { Button } from '@/components/ui/Button'
 import CtaSection from '@/components/sections/CtaSection'
 import { ExternalLink, Code2, Smartphone, Brain, BarChart3 } from 'lucide-react'
 
