@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
@@ -37,27 +38,26 @@ export default function Navbar() {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
             ? 'glass border-b border-brand-500/20 shadow-2xl shadow-brand-900/20'
             : 'bg-transparent'
-        }`}
+          }`}
       >
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between py-4">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative w-9 h-9">
-              <div className="absolute inset-0 bg-brand-500 rounded-lg rotate-45 group-hover:rotate-[60deg] transition-transform duration-300" />
-              <div className="absolute inset-1 bg-accent-400 rounded-md rotate-12 group-hover:rotate-[20deg] transition-transform duration-300" />
-              <span className="absolute inset-0 flex items-center justify-center text-white font-sans font-bold text-sm z-10">
-                IS
-              </span>
+            <div className="relative">
+              <Image
+                src="/logos/logo4-removebg-preview.png"
+                alt="ISAOS Soluções Digitais"
+                width={220}
+                height={80}
+                className="h-14 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+                priority
+              />
             </div>
             <span className="font-sans font-700 text-white text-xl tracking-tight">
               ISAOS
-              <span className="text-brand-400 font-400 text-sm ml-1 hidden sm:inline">
-                .ao
-              </span>
             </span>
           </Link>
 
@@ -69,11 +69,10 @@ export default function Navbar() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className={`relative px-4 py-2 text-sm font-body font-500 rounded-lg transition-all duration-200 group ${
-                      isActive
+                    className={`relative px-4 py-2 text-sm font-body font-500 rounded-lg transition-all duration-200 group ${isActive
                         ? 'text-brand-300'
                         : 'text-slate-400 hover:text-white'
-                    }`}
+                      }`}
                   >
                     {isActive && (
                       <motion.span
@@ -131,11 +130,10 @@ export default function Navbar() {
                 >
                   <Link
                     href={link.href}
-                    className={`block px-8 py-4 text-2xl font-sans font-700 tracking-tight transition-colors ${
-                      pathname === link.href
+                    className={`block px-8 py-4 text-2xl font-sans font-700 tracking-tight transition-colors ${pathname === link.href
                         ? 'text-brand-300'
                         : 'text-slate-400 hover:text-white'
-                    }`}
+                      }`}
                   >
                     {link.label}
                   </Link>
