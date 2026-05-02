@@ -1,32 +1,15 @@
 # ISAOS Soluções Digitais — Website Institucional
 
-Website institucional completo e moderno para a ISAOS Soluções Digitais.
+Website institucional para a ISAOS Soluções Digitais.
 
 ## Stack Tecnológica
 
-- **Next.js 14** (App Router)
+- **Next.js 16** (App Router)
 - **React 18**
 - **TypeScript**
 - **Tailwind CSS**
 - **Framer Motion** (animações)
 
-## Requisitos
-
-- Node.js 18.17 ou superior
-- npm 9+
-
-## Início Rápido
-
-```bash
-# 1. Instalar dependências
-npm install
-
-# 2. Iniciar servidor de desenvolvimento
-npm run dev
-
-# 3. Abrir no browser
-# http://localhost:3000
-```
 
 ## Páginas
 
@@ -42,7 +25,7 @@ npm run dev
 
 ```
 src/
-├── app/                    # App Router (Next.js 14)
+├── app/                    # App Router (Next.js 16)
 │   ├── layout.tsx          # Layout raiz com Navbar e Footer
 │   ├── page.tsx            # Homepage
 │   ├── about/              # Página Sobre
@@ -58,47 +41,3 @@ src/
 └── styles/                 # CSS global
 ```
 
-## Personalização
-
-### Logo
-Substitua o logotipo no componente `Navbar.tsx` e `Footer.tsx`. Actualmente usa um logotipo gerado por CSS que pode ser substituído por:
-
-```tsx
-import Image from 'next/image'
-<Image src="/logo.svg" alt="ISAOS" width={120} height={40} />
-```
-
-### Cores
-Edite `tailwind.config.ts` para ajustar a paleta de cores da marca.
-
-### Conteúdo
-- Textos: edite directamente nos ficheiros de cada página
-- Serviços: `src/components/sections/ServicesSection.tsx`
-- Portfólio: `src/app/portfolio/PortfolioContent.tsx`
-- Testemunhos: `src/components/sections/SocialProofSection.tsx`
-
-### WhatsApp
-Substitua `244923000000` pelo número real em:
-- `src/components/ui/WhatsAppButton.tsx`
-- `src/components/sections/HeroSection.tsx`
-- `src/app/contact/ContactContent.tsx`
-
-## Deploy
-
-```bash
-# Build de produção
-npm run build
-
-# Iniciar servidor de produção
-npm start
-```
-
-### Vercel (recomendado)
-```bash
-npm i -g vercel
-vercel
-```
-
-## Licença
-
-© 2024 ISAOS Soluções Digitais. Todos os direitos reservados.
