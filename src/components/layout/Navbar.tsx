@@ -39,26 +39,23 @@ export default function Navbar() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
-            ? 'glass border-b border-brand-500/20 shadow-2xl shadow-brand-900/20'
-            : 'bg-transparent'
+          ? 'glass border-b border-brand-500/20 shadow-2xl shadow-brand-900/20'
+          : 'bg-transparent'
           }`}
       >
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between py-4">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative">
+            <div className="relative overflow-visible">
               <Image
-                src="/logos/logo4-removebg-preview.png"
+                src="/logos/logo3-removebg-preview.png"
                 alt="ISAOS Soluções Digitais"
-                width={220}
-                height={80}
-                className="h-14 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+                width={240}
+                height={100}
+                className="h-20 w-auto object-contain -my-2 group-hover:scale-105 transition-transform duration-300"
                 priority
               />
             </div>
-            <span className="font-sans font-700 text-white text-xl tracking-tight">
-              ISAOS
-            </span>
           </Link>
 
           {/* Desktop Nav */}
@@ -70,8 +67,8 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     className={`relative px-4 py-2 text-sm font-body font-500 rounded-lg transition-all duration-200 group ${isActive
-                        ? 'text-brand-300'
-                        : 'text-slate-400 hover:text-white'
+                      ? 'text-brand-300'
+                      : 'text-slate-400 hover:text-white'
                       }`}
                   >
                     {isActive && (
@@ -131,8 +128,8 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     className={`block px-8 py-4 text-2xl font-sans font-700 tracking-tight transition-colors ${pathname === link.href
-                        ? 'text-brand-300'
-                        : 'text-slate-400 hover:text-white'
+                      ? 'text-brand-300'
+                      : 'text-slate-400 hover:text-white'
                       }`}
                   >
                     {link.label}
