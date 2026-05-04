@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import PortfolioContent from './PortfolioContent'
+import { Portfolio } from '@/components/Portfolio'
 
 export const metadata: Metadata = {
   title: 'Portfólio',
@@ -7,5 +7,5 @@ export const metadata: Metadata = {
 }
 
 export default function PortfolioPage() {
-  return <PortfolioContent />
+  return <Portfolio />
 }
