@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { SectionWrapper } from '@/components/common/SectionWrapper'
 import { Star, Quote } from 'lucide-react'
+import { LogoBancAO, LogoEduTech, LogoFreshMarket, LogoGrupoMJS, LogoHealthPlus, LogoLogiAO, LogoRetailPro, LogoTelcoAO } from '@/assets/logos'
 
 const testimonials = [
   {
@@ -32,6 +33,19 @@ const testimonials = [
 ]
 
 const clients = ['Grupo MJS', 'BancAO', 'FreshMarket', 'TelcoAO', 'HealthPlus', 'EduTech Angola']
+const clientLogos = [
+  { name: 'BancAO', Logo: LogoBancAO },
+  { name: 'FreshMarket', Logo: LogoFreshMarket },
+  { name: 'HealthPlus', Logo: LogoHealthPlus },
+  { name: 'TelcoAO', Logo: LogoTelcoAO },
+  { name: 'EduTech Angola', Logo: LogoEduTech },
+  { name: 'LogiAO', Logo: LogoLogiAO },
+  { name: 'Grupo MJS', Logo: LogoGrupoMJS },
+  { name: 'RetailPro AO', Logo: LogoRetailPro },
+]
+
+const ticker = [...clientLogos, ...clientLogos]
+
 
 export default function SocialProofSection() {
   return (
@@ -101,24 +115,51 @@ export default function SocialProofSection() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
         className="border-t border-white/5 pt-12"
       >
-        <p className="text-center text-slate-600 text-xs font-sans font-600 uppercase tracking-[0.2em] mb-8">
+        <p className="text-center text-slate-600 text-xs font-sans font-600 uppercase tracking-[0.2em] mb-10">
           Empresas que confiam em nós
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10">
-          {clients.map((client, i) => (
-            <motion.div
-              key={client}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.05 }}
-              className="font-sans font-700 text-slate-600 hover:text-slate-400 text-lg tracking-tight transition-colors duration-200 cursor-default"
-            >
-              {client}
-            </motion.div>
-          ))}
+
+        {/* Fade mask nas bordas */}
+        <div
+          className="relative overflow-hidden"
+          style={{
+            maskImage:
+              'linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)',
+            WebkitMaskImage:
+              'linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)',
+          }}
+        >
+          <motion.div
+            className="flex items-center w-max"
+            animate={{ x: ['0px', '-50%'] }}
+            transition={{
+              repeat: Infinity,
+              repeatType: 'loop',
+              duration: 36,
+              ease: 'linear',
+            }}
+            style={{ willChange: 'transform' }}
+          >
+            {ticker.map(({ name, Logo }, i) => (
+              <div
+                key={`${name}-${i}`}
+                className="
+                  flex-shrink-0 flex items-center justify-center
+                  px-10 h-16 mx-2
+                  text-slate-600
+                  hover:text-slate-300
+                  transition-colors duration-300
+                  cursor-default
+                "
+                title={name}
+              >
+                <Logo />
+              </div>
+            ))}
+          </motion.div>
         </div>
       </motion.div>
     </SectionWrapper>
