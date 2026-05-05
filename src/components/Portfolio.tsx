@@ -5,9 +5,12 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { SectionWrapper } from '@/components/common/SectionWrapper'
 import { Button } from '@/components/ui/Button'
 import CtaSection from '@/components/sections/CtaSection'
-import { ExternalLink, Code2, Smartphone, Brain, BarChart3 } from 'lucide-react'
+import { ExternalLink, Code2, Smartphone, Brain, MonitorCheck } from 'lucide-react'
 
-const categories = ['Todos', 'Web', 'Mobile', 'IA & Automação', 'BI & Analytics']
+const categories = [
+  'Todos', 'Web', 'Mobile', 'Software de Gestão',
+  'IA & Automação', 'Segurança Electrônica', 'CyberSegurança'
+]
 
 const projects = [
   {
@@ -45,14 +48,14 @@ const projects = [
   },
   {
     id: 4,
-    title: 'TelcoAO Analytics Hub',
-    category: 'BI & Analytics',
-    description: 'Plataforma de Business Intelligence para empresa de telecomunicações com dashboards em tempo real e análises preditivas.',
-    techs: ['Apache Superset', 'dbt', 'Snowflake', 'Python'],
+    title: 'SellAO Digital',
+    category: 'Software de Gestão',
+    description: 'Sistema de de gestão com controle de vendas, estoque e relatórios para empresa de vendas de automóveis.',
+    techs: ['C#', 'Go', 'Entity Framework', 'SAP'],
     color: 'from-amber-600 to-amber-900',
-    icon: BarChart3,
+    icon: MonitorCheck,
     highlight: '#d97706',
-    result: 'Tomada de decisão 3x mais rápida para a liderança',
+    result: 'Controle eficiente de operações e mais produtividade.',
   },
   {
     id: 5,
@@ -70,7 +73,7 @@ const projects = [
     title: 'LogiAO Fleet Management',
     category: 'Mobile',
     description: 'Solução de gestão de frotas com rastreamento GPS em tempo real, optimização de rotas e controlo de combustível.',
-    techs: ['Flutter', 'Go', 'Google Maps', 'PostgreSQL'],
+    techs: ['Flutter', 'Node', 'Google Maps', 'PostgreSQL'],
     color: 'from-rose-600 to-rose-900',
     icon: Smartphone,
     highlight: '#e11d48',
@@ -78,7 +81,7 @@ const projects = [
   },
 ]
 
-export default function PortfolioContent() {
+export const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState('Todos')
 
   const filtered = projects.filter(
