@@ -1,22 +1,9 @@
+"use client"
 import Link from 'next/link'
 import Image from 'next/image'
 import { Mail, MapPin, Phone, Linkedin, Twitter, Instagram } from 'lucide-react'
+import { useI18n } from '@/i18n'
 
-const services = [
-  { label: 'Desenvolvimento Web', href: '/services#web' },
-  { label: 'Apps Mobile', href: '/services#mobile' },
-  { label: 'Automação & IA', href: '/services#ai' },
-  { label: 'CyberSegurança', href: '/services#cloud' },
-  { label: 'Segurança Electrônica', href: '/services#consulting' },
-  { label: 'Software de Gestão', href: '/services#consulting' },
-]
-
-const company = [
-  { label: 'Sobre Nós', href: '/about' },
-  { label: 'Portfólio', href: '/portfolio' },
-  { label: 'Carreiras', href: '#' },
-  { label: 'Contacto', href: '/contact' },
-]
 
 const socials = [
   { icon: Linkedin, href: '#', label: 'LinkedIn' },
@@ -25,6 +12,23 @@ const socials = [
 ]
 
 export default function Footer() {
+  const { t } = useI18n()
+
+  const services = [
+    { label: t.services.items[0].title, href: '/services#web' },
+    { label: t.services.items[1].title, href: '/services#mobile' },
+    { label: t.services.items[2].title, href: '/services#ai' },
+    { label: t.services.items[3].title, href: '/services#cybersecurity' },
+    { label: t.services.items[4].title, href: '/services#seurity' },
+    { label: t.services.items[5].title, href: '/services#software' },
+  ]
+
+  const company = [
+    { label: t.nav.about, href: '/about' },
+    { label: t.nav.portfolio, href: '/portfolio' },
+    { label: t.nav.contact, href: '/contact' },
+  ]
+
   return (
     <footer className="relative border-t border-white/5 bg-dark-800 overflow-hidden">
       {/* Glow */}
@@ -39,12 +43,12 @@ export default function Footer() {
                 src="/logos/logo-vertical.png"
                 alt="ISAOS Soluções Digitais"
                 width={150}
-                height={50} 
+                height={50}
                 className="object-contain group-hover:scale-105 transition-transform duration-300"
               />
             </Link>
             <p className="text-slate-500 text-sm leading-relaxed mb-6 font-body">
-              Transformamos ideias em soluções digitais de alto impacto. A tecnologia ao serviço do crescimento do seu negócio.
+              {t.footer.description}
             </p>
             <div className="flex items-center gap-3">
               {socials.map(({ icon: Icon, href, label }) => (
@@ -63,7 +67,7 @@ export default function Footer() {
           {/* Services */}
           <div>
             <h4 className="font-sans font-700 text-white text-sm mb-5 tracking-wide uppercase">
-              Serviços
+              {t.footer.servicesTitle}
             </h4>
             <ul className="space-y-3">
               {services.map((item) => (
@@ -82,7 +86,7 @@ export default function Footer() {
           {/* Company */}
           <div>
             <h4 className="font-sans font-700 text-white text-sm mb-5 tracking-wide uppercase">
-              Empresa
+              {t.footer.companyTitle}
             </h4>
             <ul className="space-y-3">
               {company.map((item) => (
@@ -101,15 +105,13 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <h4 className="font-sans font-700 text-white text-sm mb-5 tracking-wide uppercase">
-              Contacto
+              {t.footer.contactTitle}
             </h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin size={16} className="text-brand-400 mt-0.5 flex-shrink-0" />
                 <span className="text-slate-500 text-sm font-body">
-                  Luanda, Angola
-                  <br />
-                  Viana, Vila de Viana
+                  {t.footer.address}
                 </span>
               </li>
               <li className="flex items-center gap-3">
@@ -137,14 +139,14 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-slate-600 text-xs font-body">
-            © {new Date().getFullYear()} ISAOS Soluções Digitais. Todos os direitos reservados.
+            © {new Date().getFullYear()} ISAOS Soluções Digitais. {t.footer.rights}
           </p>
           <div className="flex items-center gap-6">
             <Link href="#" className="text-slate-600 hover:text-slate-400 text-xs font-body transition-colors">
-              Privacidade
+              {t.footer.privacy}
             </Link>
             <Link href="#" className="text-slate-600 hover:text-slate-400 text-xs font-body transition-colors">
-              Termos de Uso
+              {t.footer.terms}
             </Link>
           </div>
         </div>

@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/Button'
 import { Send, CheckCircle } from 'lucide-react'
+import { useI18n } from '@/i18n'
 
 interface FormState {
   name: string
@@ -21,20 +22,21 @@ const initialState: FormState = {
   message: '',
 }
 
-const services = [
-  'Desenvolvimento Web',
-  'Aplicação Mobile',
-  'Automação & Inteligência Artificial',
-  'Cybersegurança',
-  'Segurança Eletrônica',
-  'Software de Gestão',
-  'Outro',
-]
+
 
 export default function ContactForm() {
   const [form, setForm] = useState<FormState>(initialState)
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
+  const { t } = useI18n()
+  const services = [
+    t.services.items[0].title,
+    t.services.items[1].title,
+    t.services.items[2].title,
+    t.services.items[3].title,
+    t.services.items[4].title,
+    t.services.items[5].title,
+  ]
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -65,16 +67,16 @@ export default function ContactForm() {
           <CheckCircle size={32} className="text-accent-400" />
         </div>
         <h3 className="font-sans font-700 text-white text-2xl mb-3">
-          Mensagem Enviada!
+          {t.contact.successTitle}
         </h3>
         <p className="text-slate-400 font-body max-w-sm">
-          Obrigado pelo contacto. A nossa equipa responderá em menos de 24 horas.
+          {t.contact.successSub}
         </p>
         <button
           onClick={() => { setSubmitted(false); setForm(initialState) }}
           className="mt-8 text-brand-400 hover:text-brand-300 text-sm font-sans font-600 transition-colors"
         >
-          Enviar outra mensagem
+          {t.contact.successBack}
         </button>
       </motion.div>
     )
@@ -85,7 +87,7 @@ export default function ContactForm() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
           <label className="block text-xs font-sans font-600 text-slate-400 uppercase tracking-wider mb-2">
-            Nome completo *
+            {t.contact.name} *
           </label>
           <input
             type="text"
@@ -93,13 +95,13 @@ export default function ContactForm() {
             required
             value={form.name}
             onChange={handleChange}
-            placeholder="O seu nome"
+            placeholder={t.contact.namePlaceholder}
             className={inputClass}
           />
         </div>
         <div>
           <label className="block text-xs font-sans font-600 text-slate-400 uppercase tracking-wider mb-2">
-            Email *
+            {t.contact.email} *
           </label>
           <input
             type="email"
@@ -116,7 +118,7 @@ export default function ContactForm() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
           <label className="block text-xs font-sans font-600 text-slate-400 uppercase tracking-wider mb-2">
-            Telefone
+            {t.contact.phone}
           </label>
           <input
             type="tel"
@@ -129,7 +131,7 @@ export default function ContactForm() {
         </div>
         <div>
           <label className="block text-xs font-sans font-600 text-slate-400 uppercase tracking-wider mb-2">
-            Serviço de interesse
+            {t.contact.service}
           </label>
           <select
             name="service"
@@ -137,7 +139,7 @@ export default function ContactForm() {
             onChange={handleChange}
             className={inputClass}
           >
-            <option value="" disabled>Seleccione um serviço</option>
+            <option value="" disabled>{t.contact.servicePlaceholder}</option>
             {services.map((s) => (
               <option key={s} value={s}>{s}</option>
             ))}
@@ -147,7 +149,7 @@ export default function ContactForm() {
 
       <div>
         <label className="block text-xs font-sans font-600 text-slate-400 uppercase tracking-wider mb-2">
-          Mensagem *
+          {t.contact.message} *
         </label>
         <textarea
           name="message"
@@ -155,7 +157,7 @@ export default function ContactForm() {
           value={form.message}
           onChange={handleChange}
           rows={5}
-          placeholder="Descreva o seu projecto ou necessidade..."
+          placeholder={t.contact.messagePlaceholder}
           className={inputClass}
         />
       </div>
@@ -169,18 +171,18 @@ export default function ContactForm() {
         {loading ? (
           <>
             <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-            A enviar...
+            {t.contact.sending}
           </>
         ) : (
           <>
             <Send size={18} />
-            Enviar Mensagem
+            {t.contact.send}
           </>
         )}
       </Button>
 
       <p className="text-xs text-slate-600 text-center font-body">
-        Os seus dados são tratados com confidencialidade e não são partilhados.
+        {t.contact.privacy}
       </p>
     </form>
   )

@@ -6,7 +6,9 @@ import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
+import { useI18n } from '@/i18n'
 
+import { LocaleSwitcher } from '@/components/ui/LocaleSwitcher'
 import { Button } from '@/components/ui/Button'
 
 const navLinks = [
@@ -21,6 +23,15 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const pathname = usePathname()
+  const { t } = useI18n()
+
+  const navLinks = [
+    { label: t.nav.home, href: '/' },
+    { label: t.nav.about, href: '/about' },
+    { label: t.nav.services, href: '/services' },
+    { label: t.nav.portfolio, href: '/portfolio' },
+    { label: t.nav.contact, href: '/contact' },
+  ]
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20)
@@ -85,21 +96,23 @@ export default function Navbar() {
             })}
           </ul>
 
-          {/* CTA */}
-          <div className="hidden md:flex items-center gap-3">
-            <Button href="/contact" size="sm">
-              Solicitar Orçamento
-            </Button>
+          {/* Right controls */}
+          <div className="hidden md:flex items-center gap-3 flex-shrink-0">
+            <LocaleSwitcher />
+            <Button href="/contact" size="sm">{t.nav.cta}</Button>
           </div>
 
-          {/* Mobile toggle */}
-          <button
-            onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors"
-            aria-label="Abrir menu"
-          >
-            {mobileOpen ? <X size={22} /> : <Menu size={22} />}
-          </button>
+          {/* Mobile: switcher + hamburger */}
+          <div className="md:hidden flex items-center gap-2">
+            <LocaleSwitcher />
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className={`p-2 rounded-lg transition-colors text-slate-400 hover:text-white hover:bg-white/5`}
+              aria-label="Abrir menu"
+            >
+              {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+            </button>
+          </div>
         </nav>
       </motion.header>
 
@@ -142,7 +155,7 @@ export default function Navbar() {
                 transition={{ delay: navLinks.length * 0.07 }}
                 className="mt-6"
               >
-                <Button href="/contact">Solicitar Orçamento</Button>
+                <Button href="/contact">{t.nav.cta}</Button>
               </motion.div>
             </div>
           </motion.div>
