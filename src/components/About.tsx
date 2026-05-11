@@ -6,28 +6,6 @@ import CtaSection from '@/components/sections/CtaSection'
 import { Heart, Rocket, Eye, Users } from 'lucide-react'
 import { useI18n } from '@/i18n'
 
-const values = [
-  {
-    icon: Heart,
-    title: 'Integridade',
-    description: 'Transparência e honestidade em cada interacção, com clientes, parceiros e colaboradores.',
-  },
-  {
-    icon: Rocket,
-    title: 'Inovação Contínua',
-    description: 'Adoptamos continuamente novas tecnologias para manter os nossos clientes na vanguarda.',
-  },
-  {
-    icon: Users,
-    title: 'Colaboração',
-    description: 'Trabalho em equipa e co-criação com os clientes para soluções verdadeiramente personalizadas.',
-  },
-  {
-    icon: Eye,
-    title: 'Excelência',
-    description: 'Comprometimento com os mais altos padrões de qualidade em tudo o que fazemos.',
-  },
-]
 
 const valueIcons = [Heart, Rocket, Users, Eye]
 

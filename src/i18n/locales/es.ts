@@ -319,7 +319,55 @@ const es = {
       'Ciberseguridad',
     ],
   },
-
+  serviceContent: {
+    services: [
+      {
+        id: 'web',
+        title: 'Desarrollo Web',
+        subtitle: 'Presencia digital de alto impacto',
+        description:
+          'Creamos sitios web y plataformas de alto rendimiento que no solo impresionan visualmente, sino que también convierten visitantes en clientes.',
+        benefits: [
+          'Diseño responsive y mobile-first',
+          'Optimización SEO avanzada',
+          'Velocidad de carga ultrarrápida',
+          'Integración con sistemas existentes',
+          'Panel de administración intuitivo',
+          'Mantenimiento y soporte continuo',
+        ],
+      },
+      {
+        id: 'mobile',
+        title: 'Aplicaciones Móviles',
+        subtitle: 'Excelencia en iOS y Android',
+        description:
+          'Desarrollamos aplicaciones móviles nativas e híbridas que ofrecen experiencias excepcionales.',
+        benefits: [
+          'Apps nativas para iOS y Android',
+          'React Native y Flutter',
+          'UX/UI enfocado en la experiencia del usuario',
+          'Integración con APIs y backends',
+          'Publicación en app stores',
+          'Actualizaciones y mejoras continuas',
+        ],
+      },
+      {
+        id: 'ai',
+        title: 'Automatización e IA',
+        subtitle: 'Inteligencia al servicio del negocio',
+        description:
+          'Integramos inteligencia artificial y automatización de procesos para eliminar tareas repetitivas y aumentar la eficiencia.',
+        benefits: [
+          'Chatbots y asistentes virtuales',
+          'Procesamiento de lenguaje natural',
+          'Automatización de procesos (RPA)',
+          'Análisis predictivo y machine learning',
+          'Integración con modelos de IA existentes',
+          'Soluciones adaptadas al contexto africano',
+        ],
+      },
+    ],
+  },
   notFound: {
     title: 'Página no encontrada',
     sub:

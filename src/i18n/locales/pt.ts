@@ -174,6 +174,101 @@ const pt = {
     ],
     categories: ['Todos', 'Web', 'Mobile', 'Software de Gestão', 'IA & Automação', 'Segurança Electrônica', 'CyberSegurança'],
   },
+  serviceContent: {
+    services: [
+      {
+        id: 'web',
+        title: 'Desenvolvimento Web',
+        subtitle: 'Presença digital de alto impacto',
+        description:
+          'Criamos websites e plataformas web de alto desempenho que não apenas impressionam visualmente, mas convertem visitantes em clientes. Utilizamos as tecnologias mais modernas como Next.js, React e Node.js para garantir performance, escalabilidade e segurança.',
+        benefits: [
+          'Design responsivo e mobile-first',
+          'Optimização SEO avançada',
+          'Velocidade de carregamento ultrarrápida',
+          'Integração com sistemas existentes',
+          'Painel de administração intuitivo',
+          'Manutenção e suporte contínuos',
+        ],
+
+      },
+      {
+        id: 'mobile',
+        title: 'Aplicações Mobile',
+        subtitle: 'iOS & Android de excelência',
+        description:
+          'Desenvolvemos aplicações mobile nativas e híbridas que proporcionam experiências excepcionais. Da ideia ao lançamento nas stores, tratamos de todo o processo com foco na usabilidade e performance.',
+        benefits: [
+          'Apps nativas iOS e Android',
+          'React Native e Flutter',
+          'UX/UI focado na experiência do utilizador',
+          'Integração com APIs e backends',
+          'Publicação nas app stores',
+          'Actualizações e melhorias contínuas',
+        ],
+      },
+      {
+        id: 'ai',
+        title: 'Automação & IA',
+        subtitle: 'Inteligência ao serviço do negócio',
+        description:
+          'Integramos inteligência artificial e automação de processos para eliminar tarefas repetitivas, reduzir erros humanos e liberar a sua equipa para trabalho de maior valor. Desde chatbots a sistemas de recomendação personalizados.',
+        benefits: [
+          'Chatbots e assistentes virtuais',
+          'Processamento de linguagem natural',
+          'Automação de processos (RPA)',
+          'Análise preditiva e machine learning',
+          'Integração com modelos de IA existentes',
+          'Soluções personalizadas ao contexto africano',
+        ],
+      },
+      {
+        id: 'cybersecurity',
+        title: 'CyberSegurança',
+        subtitle: 'Segurança digital',
+        description:
+          'Fornecemos e implementamos soluções de segurança digital através de licenças de software, incluindo antivírus corporativo, sistemas de backup e ferramentas de proteção contra ameaças cibernéticas.',
+        benefits: [
+          'Proteção contra vírus, malware e ataques',
+          'Segurança de dados com backup confiável',
+          'Continuidade do negócio em caso de falhas',
+          'Redução de riscos e perdas digitais',
+          'Conformidade com normas e boas práticas de segurança',
+          'Aumento da confiança de clientes e parceiros'
+        ],
+      },
+      {
+        id: 'security',
+        title: 'Segurança Electrônica',
+        subtitle: 'Protecção de seus bens',
+        description:
+          'Fornecemos e implementamos soluções completas de segurança eletrônica, incluindo sistemas de CCTV, cercas elétricas e rastreamento por GPS, garantindo proteção para residências, empresas e patrimônios.',
+        benefits: [
+          'Monitoramento 24/7 de ambientes físicos',
+          'Maior proteção contra invasões e roubos',
+          'Controle e rastreamento em tempo real',
+          'Registro de imagens para auditoria e investigação',
+          'Resposta rápida a incidentes de segurança',
+          'Tranquilidade e segurança para o seu espaço',
+        ],
+      },
+      {
+        id: 'software',
+        title: 'Software de Gestão',
+        subtitle: 'Automação de processos',
+        description:
+          'Fornecemos e implementamos sistemas de gestão através de licenças de software, ajudando empresas a automatizar processos, controlar operações e melhorar a eficiência.',
+        benefits: [
+          'Controle total de vendas e estoque',
+          'Automação de processos operacionais e administrativos',
+          'Aumento da produtividade e eficiência da equipe',
+          'Melhoria na tomada de decisões com dados em tempo real',
+          'Redução de erros humanos e retrabalho',
+          'Escalabilidade para crescimento do negócio',
+        ],
+      },
+    ]
+  },
   notFound: {
     title: 'Página não encontrada',
     sub: 'A página que procura não existe ou foi movida. Volte ao início.',

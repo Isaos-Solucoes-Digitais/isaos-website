@@ -228,6 +228,100 @@ const fr = {
       'Cybersécurité',
     ],
   },
+  serviceContent: {
+    services: [
+      {
+        id: 'web',
+        title: 'Développement Web',
+        subtitle: 'Présence digitale à fort impact',
+        description:
+          "Nous créons des sites web et des plateformes web haute performance qui impressionnent non seulement visuellement, mais convertissent également les visiteurs en clients. Nous utilisons des technologies modernes comme Next.js, React et Node.js pour garantir performance, évolutivité et sécurité.",
+        benefits: [
+          'Design responsive et mobile-first',
+          'Optimisation SEO avancée',
+          'Vitesse de chargement ultra-rapide',
+          'Intégration avec les systèmes existants',
+          "Panneau d'administration intuitif",
+          'Maintenance et support continus',
+        ],
+      },
+      {
+        id: 'mobile',
+        title: 'Applications Mobiles',
+        subtitle: 'Excellence iOS & Android',
+        description:
+          "Nous développons des applications mobiles natives et hybrides offrant des expériences exceptionnelles. De l’idée au lancement sur les stores, nous gérons tout le processus avec un accent sur l’utilisabilité et la performance.",
+        benefits: [
+          'Applications natives iOS et Android',
+          'React Native et Flutter',
+          "UX/UI centré sur l'expérience utilisateur",
+          'Intégration avec APIs et backends',
+          'Publication sur les app stores',
+          'Mises à jour et améliorations continues',
+        ],
+      },
+      {
+        id: 'ai',
+        title: 'Automatisation & IA',
+        subtitle: "L'intelligence au service du business",
+        description:
+          "Nous intégrons l’intelligence artificielle et l’automatisation des processus pour éliminer les tâches répétitives, réduire les erreurs humaines et libérer votre équipe pour des tâches à plus forte valeur ajoutée.",
+        benefits: [
+          'Chatbots et assistants virtuels',
+          'Traitement du langage naturel',
+          'Automatisation des processus (RPA)',
+          'Analyse prédictive et machine learning',
+          "Intégration avec des modèles d'IA existants",
+          'Solutions adaptées au contexte africain',
+        ],
+      },
+      {
+        id: 'cybersecurity',
+        title: 'Cybersécurité',
+        subtitle: 'Sécurité numérique',
+        description:
+          "Nous fournissons et mettons en œuvre des solutions de sécurité numérique via des licences logicielles, y compris antivirus d’entreprise, systèmes de sauvegarde et outils de protection contre les cybermenaces.",
+        benefits: [
+          'Protection contre virus, malwares et attaques',
+          'Sécurité des données avec sauvegardes fiables',
+          "Continuité d'activité en cas de panne",
+          'Réduction des risques et pertes numériques',
+          'Conformité aux normes et bonnes pratiques',
+          'Renforcement de la confiance des clients et partenaires',
+        ],
+      },
+      {
+        id: 'security',
+        title: 'Sécurité Électronique',
+        subtitle: 'Protection de vos biens',
+        description:
+          "Nous fournissons et mettons en œuvre des solutions complètes de sécurité électronique, y compris CCTV, clôtures électriques et suivi GPS, garantissant la protection des résidences, entreprises et patrimoines.",
+        benefits: [
+          'Surveillance 24h/24 et 7j/7',
+          'Protection renforcée contre les intrusions et vols',
+          'Contrôle et suivi en temps réel',
+          "Enregistrement d’images pour audit et enquête",
+          'Réponse rapide aux incidents',
+          'Tranquillité et sécurité pour votre espace',
+        ],
+      },
+      {
+        id: 'software',
+        title: 'Logiciels de Gestion',
+        subtitle: 'Automatisation des processus',
+        description:
+          "Nous fournissons et implémentons des systèmes de gestion via des licences logicielles, aidant les entreprises à automatiser les processus, contrôler les opérations et améliorer l’efficacité.",
+        benefits: [
+          'Contrôle total des ventes et du stock',
+          'Automatisation des processus opérationnels et administratifs',
+          "Augmentation de la productivité de l'équipe",
+          'Amélioration de la prise de décision avec des données en temps réel',
+          'Réduction des erreurs humaines et du retravail',
+          "Évolutivité pour la croissance de l'entreprise",
+        ],
+      },
+    ]
+  },
   notFound: {
     title: 'Page non trouvée',
     sub: 'La page que vous recherchez n’existe pas ou a été déplacée. Retournez à l’accueil.',

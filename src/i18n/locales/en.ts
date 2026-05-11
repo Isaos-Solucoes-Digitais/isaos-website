@@ -228,6 +228,100 @@ const en = {
       'Cybersecurity',
     ],
   },
+  serviceContent: {
+    services: [
+      {
+        id: 'web',
+        title: 'Web Development',
+        subtitle: 'High-impact digital presence',
+        description:
+          'We create high-performance websites and web platforms that not only impress visually, but also convert visitors into customers. We use modern technologies such as Next.js, React, and Node.js to ensure performance, scalability, and security.',
+        benefits: [
+          'Responsive and mobile-first design',
+          'Advanced SEO optimization',
+          'Ultra-fast loading speed',
+          'Integration with existing systems',
+          'Intuitive admin dashboard',
+          'Continuous maintenance and support',
+        ],
+      },
+      {
+        id: 'mobile',
+        title: 'Mobile Applications',
+        subtitle: 'Excellent iOS & Android apps',
+        description:
+          'We develop native and hybrid mobile applications that provide exceptional experiences. From idea to store launch, we handle the entire process with a focus on usability and performance.',
+        benefits: [
+          'Native iOS and Android apps',
+          'React Native and Flutter',
+          'UX/UI focused on user experience',
+          'Integration with APIs and backends',
+          'Publishing on app stores',
+          'Continuous updates and improvements',
+        ],
+      },
+      {
+        id: 'ai',
+        title: 'Automation & AI',
+        subtitle: 'Intelligence serving business',
+        description:
+          'We integrate artificial intelligence and process automation to eliminate repetitive tasks, reduce human errors, and free your team for higher-value work.',
+        benefits: [
+          'Chatbots and virtual assistants',
+          'Natural language processing',
+          'Process automation (RPA)',
+          'Predictive analytics and machine learning',
+          'Integration with existing AI models',
+          'Solutions adapted to the African context',
+        ],
+      },
+      {
+        id: 'cybersecurity',
+        title: 'Cybersecurity',
+        subtitle: 'Digital security',
+        description:
+          'We provide and implement digital security solutions through software licenses, including corporate antivirus, backup systems, and cyber threat protection tools.',
+        benefits: [
+          'Protection against viruses, malware, and attacks',
+          'Reliable backup data security',
+          'Business continuity in case of failures',
+          'Reduction of digital risks and losses',
+          'Compliance with security standards and best practices',
+          'Increased trust from clients and partners',
+        ],
+      },
+      {
+        id: 'security',
+        title: 'Electronic Security',
+        subtitle: 'Protection for your assets',
+        description:
+          'We provide and implement complete electronic security solutions, including CCTV systems, electric fences, and GPS tracking.',
+        benefits: [
+          '24/7 monitoring of physical environments',
+          'Greater protection against invasions and theft',
+          'Real-time control and tracking',
+          'Image recording for auditing and investigation',
+          'Fast response to security incidents',
+          'Peace of mind and safety for your space',
+        ],
+      },
+      {
+        id: 'software',
+        title: 'Management Software',
+        subtitle: 'Process automation',
+        description:
+          'We provide and implement management systems through software licenses, helping companies automate processes and improve efficiency.',
+        benefits: [
+          'Full sales and inventory control',
+          'Automation of operational and administrative processes',
+          'Increased team productivity and efficiency',
+          'Better decision-making with real-time data',
+          'Reduction of human errors and rework',
+          'Scalability for business growth',
+        ],
+      },
+    ],
+  },
   notFound: {
     title: 'Page not found',
     sub: 'The page you are looking for does not exist or has been moved. Return to the homepage.',
