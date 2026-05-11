@@ -5,31 +5,20 @@ import { SectionWrapper } from '@/components/common/SectionWrapper'
 import ContactForm from '@/components/ui/ContactForm'
 import { MapPin, MessageCircle } from 'lucide-react'
 import { Mail, Phone, Clock } from 'lucide-react'
+import { useI18n } from '@/i18n'
 
-export const contactInfoData = [
-  {
-    icon: MapPin,
-    title: 'Localização',
-    lines: ['Viana, Luanda','Angola'],
-  },
-  {
-    icon: Mail,
-    title: 'Email',
-    lines: ['info@isaos.ao', 'projetos@isaos.ao'],
-  },
-  {
-    icon: Phone,
-    title: 'Telefone',
-    lines: ['+244 923 000 000', '+244 957 000 000'],
-  },
-  {
-    icon: Clock,
-    title: 'Horário',
-    lines: ['Seg–Sex: 8h às 18h', 'Sáb: 9h às 13h'],
-  },
-]
 
 export function Contact() {
+  const { t } = useI18n()
+  const c = t.contact
+
+  const contactInfo = [
+    { icon: MapPin, title: c.location, lines: t.footer.address.split('\n') },
+    { icon: Mail, title: c.email, lines: ['info@isaos.ao', 'projetos@isaos.ao'] },
+    { icon: Phone, title: c.phone, lines: ['+244 923 000 000', '+244 912 000 000'] },
+    { icon: Clock, title: c.hours, lines: c.hoursVal.split('\n') },
+  ]
+
   return (
     <>
       {/* Hero */}
@@ -43,15 +32,13 @@ export function Contact() {
             transition={{ duration: 0.7 }}
           >
             <span className="inline-block text-brand-400 text-xs font-sans font-700 uppercase tracking-[0.2em] mb-6">
-              Fale connosco
+              {c.tag}
             </span>
             <h1 className="font-sans font-800 text-5xl sm:text-6xl md:text-7xl text-white tracking-tight mb-6">
-              Vamos conversar
-              <br />
-              <span className="gradient-text">sobre o seu projecto</span>
+              {c.title1}<br /><span className="gradient-text">{c.title2}</span>
             </h1>
             <p className="max-w-2xl mx-auto text-slate-400 text-xl font-body leading-relaxed">
-              Conte-nos sobre a sua ideia ou desafio. A consulta inicial é gratuita e sem compromisso.
+              {c.sub}
             </p>
           </motion.div>
         </div>
@@ -68,15 +55,11 @@ export function Contact() {
             className="lg:col-span-2 space-y-6"
           >
             <div>
-              <h2 className="font-sans font-800 text-3xl text-white mb-3">
-                Informações de contacto
-              </h2>
-              <p className="text-slate-500 font-body leading-relaxed">
-                Estamos disponíveis para responder às suas questões e ajudá-lo a dar o próximo passo digital.
-              </p>
+              <h2 className="font-sans font-800 text-3xl text-white mb-3">{c.infoTitle}</h2>
+              <p className="text-slate-500 font-body leading-relaxed">{c.infoSub}</p>
             </div>
 
-            {contactInfoData.map(({ icon: Icon, title, lines }) => (
+            {contactInfo.map(({ icon: Icon, title, lines }) => (
               <div key={title} className="flex gap-4 p-5 rounded-2xl border border-white/5 bg-dark-800">
                 <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-400">
                   <Icon size={18} />
@@ -102,9 +85,9 @@ export function Contact() {
               </div>
               <div>
                 <div className="font-sans font-700 text-white text-sm group-hover:text-green-300 transition-colors">
-                  Falar no WhatsApp
+                  {c.whatsappLabel}
                 </div>
-                <div className="text-slate-500 text-xs font-body">Resposta rápida · +91 87908 07784</div>
+                <div className="text-slate-500 text-xs font-body">{c.whatsappSub} · +91 87908 07784</div>
               </div>
             </a>
           </motion.div>
@@ -117,10 +100,10 @@ export function Contact() {
             className="lg:col-span-3 p-8 rounded-3xl border border-white/5 bg-dark-800"
           >
             <h2 className="font-sans font-800 text-2xl text-white mb-2">
-              Envie uma mensagem
+              {c.formTitle}
             </h2>
             <p className="text-slate-500 text-sm font-body mb-8">
-              Preencha o formulário e responderemos em menos de 24 horas.
+              {c.formSub}
             </p>
             <ContactForm />
           </motion.div>
@@ -135,12 +118,8 @@ export function Contact() {
           viewport={{ once: true }}
           className="text-center mb-10"
         >
-          <h2 className="font-sans font-800 text-3xl text-white tracking-tight">
-            Onde estamos
-          </h2>
-          <p className="text-slate-500 font-body mt-2">
-          Prédio No 20, apartamento 8, Vila de Viana, próximo dos Bombeiros, Viana, Luanda
-             · Angola</p>
+          <h2 className="font-sans font-800 text-3xl text-white tracking-tight">{c.mapTitle}</h2>
+          <p className="text-slate-500 font-body mt-2">{c.mapSub}</p>
         </motion.div>
 
         <div className="relative h-80 rounded-3xl overflow-hidden border border-white/5 bg-dark-800">
@@ -151,7 +130,7 @@ export function Contact() {
             </div>
             <div className="text-center">
               <div className="font-sans font-700 text-white mb-1">ISAOS Soluções Digitais</div>
-              <div className="text-slate-500 text-sm font-body">Viana, Luanda, Angola</div>
+              <div className="text-slate-500 text-sm font-body">{c.mapSub}</div>
             </div>
             <a
               href="https://maps.google.com/?q=Viana,Luanda,Angola"
@@ -159,7 +138,7 @@ export function Contact() {
               rel="noopener noreferrer"
               className="mt-2 px-5 py-2 rounded-xl border border-brand-500/30 text-brand-400 text-sm font-sans font-600 hover:bg-brand-500/10 transition-colors"
             >
-              Ver no Google Maps
+              {c.mapBtn}
             </a>
           </div>
         </div>
