@@ -3,8 +3,12 @@
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/Button'
 import { ArrowRight } from 'lucide-react'
+import { useI18n } from '@/i18n'
+
 
 export default function CtaSection() {
+  const { t } = useI18n()
+
   return (
     <section className="relative py-32 overflow-hidden">
       {/* Background */}
@@ -24,22 +28,22 @@ export default function CtaSection() {
           transition={{ duration: 0.7 }}
         >
           <span className="inline-block text-brand-400 text-xs font-sans font-700 uppercase tracking-[0.2em] mb-6">
-            Pronto para começar?
+            {t.cta.tag}
           </span>
 
           <h2 className="font-sans font-800 text-4xl sm:text-5xl md:text-6xl text-white tracking-tight mb-6 leading-tight">
-            Vamos construir o futuro
+            {t.cta.title1}
             <br />
-            <span className="gradient-text">do seu negócio juntos</span>
+            <span className="gradient-text">{t.cta.title2}</span>
           </h2>
 
           <p className="text-slate-400 text-xl font-body leading-relaxed mb-10 max-w-2xl mx-auto">
-            Descubra como a tecnologia certa pode acelerar o crescimento da sua empresa de forma segura e confiável.
+            {t.cta.sub}
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button href="/contact" size="lg">
-              Solicitar Orçamento Agora
+              {t.cta.btn1}
               <ArrowRight size={18} />
             </Button>
             <Button
@@ -48,12 +52,12 @@ export default function CtaSection() {
               size="lg"
               external
             >
-              Falar com um especialista
+              {t.cta.btn2}
             </Button>
           </div>
 
           <p className="mt-8 text-slate-600 text-sm font-body">
-            Suporte especializado · Qualidade · Resposta em 24h
+            {t.cta.note}
           </p>
         </motion.div>
       </div>

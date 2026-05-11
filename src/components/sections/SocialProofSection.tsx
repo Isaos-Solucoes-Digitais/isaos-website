@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { SectionWrapper } from '@/components/common/SectionWrapper'
 import { Star, Quote } from 'lucide-react'
+import { useI18n } from '@/i18n'
 import { LogoBancAO, LogoEduTech, LogoFreshMarket, LogoGrupoMJS, LogoHealthPlus, LogoLogiAO, LogoRetailPro, LogoTelcoAO } from '@/assets/logos'
 
 const testimonials = [
@@ -48,6 +49,8 @@ const ticker = [...clientLogos, ...clientLogos]
 
 
 export default function SocialProofSection() {
+  const { t } = useI18n()
+
   return (
     <SectionWrapper className="border-t border-white/5">
       {/* Header */}
@@ -58,15 +61,15 @@ export default function SocialProofSection() {
         className="text-center mb-16"
       >
         <span className="inline-block text-brand-400 text-xs font-sans font-700 uppercase tracking-[0.2em] mb-4">
-          Prova Social
+          {t.social.tag}
         </span>
         <h2 className="font-sans font-800 text-4xl sm:text-5xl text-white tracking-tight mb-5">
-          O que dizem
+          {t.social.title1}
           <br />
-          <span className="gradient-text-blue">os nossos clientes</span>
+          <span className="gradient-text-blue">{t.social.title2}</span>
         </h2>
         <p className="max-w-lg mx-auto text-slate-500 font-body text-lg">
-          A satisfação dos nossos clientes é o melhor indicador do nosso trabalho.
+          {t.social.sub}
         </p>
       </motion.div>
 
@@ -119,7 +122,7 @@ export default function SocialProofSection() {
         className="border-t border-white/5 pt-12"
       >
         <p className="text-center text-slate-600 text-xs font-sans font-600 uppercase tracking-[0.2em] mb-10">
-          Empresas que confiam em nós
+          {t.social.clientsLabel}
         </p>
 
         {/* Fade mask nas bordas */}

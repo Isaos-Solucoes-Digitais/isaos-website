@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Syne, DM_Sans } from 'next/font/google'
 import '../styles/globals.css'
+import { I18nProvider } from '@/i18n'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import { WhatsAppButton } from '@/components/common/WhatsAppButton'
@@ -64,10 +65,12 @@ export default function RootLayout({
   return (
     <html lang="pt" className={`${syne.variable} ${dmSans.variable}`}>
       <body className="font-body bg-dark-900 text-slate-200 overflow-x-hidden">
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
-        <WhatsAppButton />
+        <I18nProvider>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+          <WhatsAppButton />
+        </I18nProvider>
       </body>
     </html>
   )
