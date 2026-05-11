@@ -4,29 +4,10 @@ import { motion } from 'framer-motion'
 import { SectionWrapper } from '@/components/common/SectionWrapper'
 import CtaSection from '@/components/sections/CtaSection'
 import { Heart, Rocket, Eye, Users } from 'lucide-react'
+import { useI18n } from '@/i18n'
 
-const values = [
-  {
-    icon: Heart,
-    title: 'Integridade',
-    description: 'Transparência e honestidade em cada interacção, com clientes, parceiros e colaboradores.',
-  },
-  {
-    icon: Rocket,
-    title: 'Inovação Contínua',
-    description: 'Adoptamos continuamente novas tecnologias para manter os nossos clientes na vanguarda.',
-  },
-  {
-    icon: Users,
-    title: 'Colaboração',
-    description: 'Trabalho em equipa e co-criação com os clientes para soluções verdadeiramente personalizadas.',
-  },
-  {
-    icon: Eye,
-    title: 'Excelência',
-    description: 'Comprometimento com os mais altos padrões de qualidade em tudo o que fazemos.',
-  },
-]
+
+const valueIcons = [Heart, Rocket, Users, Eye]
 
 const team = [
   { name: 'Osvaldo João', role: 'CEO & Co-fundador', initial: 'OJ', color: 'from-brand-500 to-brand-700' },
@@ -36,6 +17,8 @@ const team = [
 ]
 
 export const About = () => {
+  const { t } = useI18n()
+  const a = t.about
 
   return (
     <>
@@ -53,19 +36,18 @@ export const About = () => {
             className="max-w-3xl"
           >
             <span className="inline-block text-brand-400 text-xs font-sans font-700 uppercase tracking-[0.2em] mb-6">
-              Sobre a ISAOS
+              {a.tag}
             </span>
             <h1 className="font-sans font-800 text-5xl sm:text-6xl md:text-7xl text-white tracking-tight mb-6 leading-tight">
-              A história por trás
+              {a.title1}
               <br />
-              <span className="gradient-text">da tecnologia</span>
+              <span className="gradient-text">{a.title2}</span>
             </h1>
             <p className="text-slate-400 text-xl font-body leading-relaxed">
-              A ISAOS Soluções Digitais nasceu com o objetivo de oferecer soluções tecnológicas acessíveis,
-              seguras e eficientes para pessoas e empresas. 
+              {a.intro}
             </p>
           </motion.div>
-        </div> 
+        </div>
       </section>
 
       {/* Story */}
@@ -77,26 +59,13 @@ export const About = () => {
             viewport={{ once: true }}
           >
             <span className="inline-block text-brand-400 text-xs font-sans font-700 uppercase tracking-[0.2em] mb-5">
-              A nossa história
+              {a.storyTag}
             </span>
             <h2 className="font-sans font-800 text-3xl sm:text-4xl text-white tracking-tight mb-6">
-              Do sonho à realidade digital
+              {a.storyTitle}
             </h2>
             <div className="space-y-4 text-slate-400 font-body leading-relaxed">
-              <p>
-              A ISAOS Soluções Digitais nasceu com o objetivo de oferecer soluções tecnológicas acessíveis,
-              seguras e eficientes para pessoas e empresas.
-              </p>
-              <p>
-                Desde o início, focamos em desenvolvimento web, 
-                segurança digital e fornecimento de softwares essenciais, ajudando nossos clientes a construir,
-                proteger e otimizar sua presença no ambiente digital.
-              </p>
-              <p>
-                Ao longo do tempo, evoluímos para uma abordagem integrada, combinando tecnologia,
-                segurança e gestão, sempre com o compromisso de entregar resultados reais e soluções que fazem a
-                diferença no dia a dia dos nossos clientes.
-              </p>
+              <p>{a.story1}</p><p>{a.story2}</p><p>{a.story3}</p>
             </div>
           </motion.div>
 
@@ -106,16 +75,8 @@ export const About = () => {
             viewport={{ once: true }}
             className="grid grid-cols-2 gap-4"
           >
-            {[
-              { number: '2019', label: 'Ano de fundação' },
-              { number: '10+', label: 'Projectos entregues' },
-              { number: '15+', label: 'Clientes activos' },
-              { number: '5+', label: 'Especialistas na equipa' },
-            ].map(({ number, label }) => (
-              <div
-                key={label}
-                className="p-6 rounded-2xl border border-white/5 bg-dark-800 text-center"
-              >
+            {a.stats.map(({ number, label }) => (
+              <div key={label} className="p-6 rounded-2xl border border-white/5 bg-dark-800 text-center">
                 <div className="font-sans font-800 text-4xl text-white mb-2">{number}</div>
                 <div className="text-slate-500 text-sm font-body">{label}</div>
               </div>
@@ -136,10 +97,9 @@ export const About = () => {
             <div className="w-10 h-10 rounded-xl bg-brand-500/20 flex items-center justify-center mb-5">
               <Rocket size={20} className="text-brand-400" />
             </div>
-            <h3 className="font-sans font-700 text-white text-2xl mb-4">Missão</h3>
+            <h3 className="font-sans font-700 text-white text-2xl mb-4">{a.missionTitle}</h3>
             <p className="text-slate-400 font-body leading-relaxed">
-              Fornecer soluções tecnológicas seguras, modernas e eficientes, ajudando pessoas e empresas a
-              crescerem e se protegerem no ambiente digital.
+              {a.missionText}
             </p>
           </motion.div>
 
@@ -153,10 +113,9 @@ export const About = () => {
             <div className="w-10 h-10 rounded-xl bg-accent-500/20 flex items-center justify-center mb-5">
               <Eye size={20} className="text-accent-400" />
             </div>
-            <h3 className="font-sans font-700 text-white text-2xl mb-4">Visão</h3>
+            <h3 className="font-sans font-700 text-white text-2xl mb-4">{a.visionTitle}</h3>
             <p className="text-slate-400 font-body leading-relaxed">
-              Ser uma referência em soluções digitais e segurança tecnológica, reconhecida pela qualidade,
-              inovação e confiança.
+              {a.visionText}
             </p>
           </motion.div>
         </div>
@@ -171,30 +130,27 @@ export const About = () => {
           className="text-center mb-16"
         >
           <span className="inline-block text-brand-400 text-xs font-sans font-700 uppercase tracking-[0.2em] mb-4">
-            Os nossos valores
+            {a.valuesTag}
           </span>
           <h2 className="font-sans font-800 text-4xl text-white tracking-tight mb-4">
-            O que nos guia todos os dias
+            {a.valuesTitle}
           </h2>
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {values.map(({ icon: Icon, title, description }, i) => (
-            <motion.div
-              key={title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="p-6 rounded-2xl border border-white/5 bg-dark-800 text-center group hover:border-brand-500/20 transition-colors"
-            >
-              <div className="w-12 h-12 rounded-xl bg-brand-500/10 flex items-center justify-center text-brand-400 mx-auto mb-5 group-hover:scale-110 transition-transform">
-                <Icon size={22} />
-              </div>
-              <h3 className="font-sans font-700 text-white text-lg mb-3">{title}</h3>
-              <p className="text-slate-500 text-sm font-body leading-relaxed">{description}</p>
-            </motion.div>
-          ))}
+          {a.values.map(({ title, description }, i) => {
+            const Icon = valueIcons[i]
+            return (
+              <motion.div key={title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
+                className="p-6 rounded-2xl border border-white/5 bg-dark-800 text-center group hover:border-brand-500/20 transition-colors">
+                <div className="w-12 h-12 rounded-xl bg-brand-500/10 flex items-center justify-center text-brand-400 mx-auto mb-5 group-hover:scale-110 transition-transform">
+                  <Icon size={22} />
+                </div>
+                <h3 className="font-sans font-700 text-white text-lg mb-3">{title}</h3>
+                <p className="text-slate-500 text-sm font-body leading-relaxed">{description}</p>
+              </motion.div>
+            )
+          })}
         </div>
       </SectionWrapper>
 
@@ -207,10 +163,10 @@ export const About = () => {
           className="text-center mb-16"
         >
           <span className="inline-block text-brand-400 text-xs font-sans font-700 uppercase tracking-[0.2em] mb-4">
-            A nossa equipa
+          {a.teamTag}
           </span>
           <h2 className="font-sans font-800 text-4xl text-white tracking-tight">
-            As pessoas por trás da ISAOS
+          {a.teamTitle}
           </h2>
         </motion.div>
 

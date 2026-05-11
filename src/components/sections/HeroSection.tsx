@@ -3,20 +3,23 @@
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/Button'
 import { ArrowRight, Zap, Shield, Globe } from 'lucide-react'
+import { useI18n } from '@/i18n'
 
 const badges = [
-  { icon: Zap, label: 'Alta Performance' },
-  { icon: Shield, label: 'Seguro & Escalável' },
-  { icon: Globe, label: 'Presença Global' },
+  { icon: Zap, key: 'badge1' as const },
+  { icon: Shield, key: 'badge2' as const },
+  { icon: Globe, key: 'badge3' as const },
 ]
 
 const stats = [
-  { value: '10+', label: 'Projectos entregues' },
-  { value: '100%', label: 'Compromisso com Qualidade' },
-  { value: '15+', label: 'Clientes satisfeitos' }, 
+  { value: '10+', key: 'stat1' as const },
+  { value: '100%', key: 'stat2' as const },
+  { value: '15+', key: 'stat3' as const },
 ]
 
 export default function HeroSection() {
+  const { t } = useI18n()
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-dark-900">
       {/* Background grid */}
@@ -44,7 +47,7 @@ export default function HeroSection() {
           className="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-full border border-brand-500/30 bg-brand-500/10 text-brand-300 text-sm font-sans font-600"
         >
           <span className="w-2 h-2 bg-accent-400 rounded-full animate-pulse" />
-          Startup de Tecnologia · Luanda, Angola
+          {t.hero.badge}
         </motion.div>
 
         {/* Headline */}
@@ -54,11 +57,11 @@ export default function HeroSection() {
           transition={{ duration: 0.7, delay: 0.1 }}
           className="font-sans font-800 text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight leading-[0.95] mb-6"
         >
-          <span className="text-white">Soluções digitais</span>
+          <span className="text-white">{t.hero.headline1}</span>
           <br />
-          <span className="gradient-text">que Transformam</span>
+          <span className="gradient-text">{t.hero.headline2}</span>
           <br />
-          <span className="text-white">Negócios</span>
+          <span className="text-white">{t.hero.headline3}</span>
         </motion.h1>
 
         {/* Subheadline */}
@@ -68,8 +71,7 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 0.25 }}
           className="max-w-2xl mx-auto text-slate-400 text-lg sm:text-xl font-body leading-relaxed mb-10"
         >
-          Desenvolvemos desde soluções inovadoras à proteção contra ameaças digitais que impulsionam o crescimento da sua empresa.
-          Nós entregamos inovação, segurança e eficiência com resultados que superam expectativas.
+          {t.hero.sub}
         </motion.p>
 
         {/* CTA Buttons */}
@@ -80,7 +82,7 @@ export default function HeroSection() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
         >
           <Button href="/contact" size="lg">
-            Solicitar Orçamento
+            {t.hero.cta1}
             <ArrowRight size={18} />
           </Button>
           <Button
@@ -92,7 +94,7 @@ export default function HeroSection() {
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
               <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
             </svg>
-            Falar no WhatsApp
+            {t.hero.cta2}
           </Button>
         </motion.div>
 
@@ -103,10 +105,10 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 0.45 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-12 mb-16"
         >
-          {stats.map(({ value, label }) => (
-            <div key={label} className="text-center">
+          {stats.map(({ value, key }) => (
+            <div key={key} className="text-center">
               <div className="font-sans font-800 text-3xl text-white mb-1">{value}</div>
-              <div className="text-slate-500 text-sm font-body">{label}</div>
+              <div className="text-slate-500 text-sm font-body">{t.hero[key]}</div>
             </div>
           ))}
         </motion.div>
@@ -118,13 +120,13 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 0.55 }}
           className="flex flex-wrap items-center justify-center gap-3"
         >
-          {badges.map(({ icon: Icon, label }) => (
+          {badges.map(({ icon: Icon, key }) => (
             <div
-              key={label}
+              key={key}
               className="flex items-center gap-2 px-4 py-2 rounded-xl border border-white/5 bg-white/[0.03] text-slate-500 text-xs font-sans font-500"
             >
               <Icon size={14} className="text-brand-400" />
-              {label}
+              {t.hero[key]}
             </div>
           ))}
         </motion.div>
@@ -137,7 +139,7 @@ export default function HeroSection() {
         transition={{ delay: 1.5 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
-        
+    
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ repeat: Infinity, duration: 1.5 }}

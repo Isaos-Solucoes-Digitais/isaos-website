@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import { Metadata as Meta } from 'next'
 import { About } from '@/components/About'
 
 export const metadata: Metadata = {
