@@ -4,48 +4,19 @@ import { motion } from 'framer-motion'
 import { SectionWrapper } from '@/components/common/SectionWrapper'
 import { Star, Quote } from 'lucide-react'
 import { useI18n } from '@/i18n'
-import { LogoBancAO, LogoEduTech, LogoFreshMarket, LogoGrupoMJS, LogoHealthPlus, LogoLogiAO, LogoRetailPro, LogoTelcoAO } from '@/assets/logos'
+import { LogoAlfa ,LogoTitanium } from '@/assets/logos'
+import type { Testimonial } from '@/types'
 
-const testimonials = [
-  {
-    name: 'Maria João Santos',
-    role: 'CEO, Grupo MJS',
-    initial: 'MJ',
-    color: 'from-brand-500 to-brand-700',
-    rating: 5,
-    text: 'A ISAOS transformou completamente a nossa presença digital. Entregaram uma plataforma e-commerce robusta que aumentou as nossas vendas em 40% nos primeiros três meses.',
-  },
-  {
-    name: 'António Carvalho',
-    role: 'Director de TI, BancAO',
-    initial: 'AC',
-    color: 'from-accent-500 to-accent-700',
-    rating: 5,
-    text: 'Profissionalismo exemplar e código de altíssima qualidade. A aplicação mobile que desenvolveram para os nossos clientes superou todas as expectativas em desempenho e usabilidade.',
-  },
-  {
-    name: 'Filipa Mendes',
-    role: 'Fundadora, FreshMarket',
-    initial: 'FM',
-    color: 'from-purple-500 to-purple-700',
-    rating: 5,
-    text: 'Desde o primeiro contacto até ao lançamento, a equipa da ISAOS foi absolutamente excepcional. Cumpriram o prazo, respeitaram o orçamento e o resultado ficou fantástico.',
-  },
-]
 
-const clients = ['Grupo MJS', 'BancAO', 'FreshMarket', 'TelcoAO', 'HealthPlus', 'EduTech Angola']
+
+const testimonials: Testimonial [] = []
+
 const clientLogos = [
-  { name: 'BancAO', Logo: LogoBancAO },
-  { name: 'FreshMarket', Logo: LogoFreshMarket },
-  { name: 'HealthPlus', Logo: LogoHealthPlus },
-  { name: 'TelcoAO', Logo: LogoTelcoAO },
-  { name: 'EduTech Angola', Logo: LogoEduTech },
-  { name: 'LogiAO', Logo: LogoLogiAO },
-  { name: 'Grupo MJS', Logo: LogoGrupoMJS },
-  { name: 'RetailPro AO', Logo: LogoRetailPro },
+  { name: 'Titanium AO', Logo: LogoTitanium },
+  { name: 'Águia Alfa', Logo: LogoAlfa },
 ]
 
-const ticker = [...clientLogos, ...clientLogos]
+const ticker = [...clientLogos]
 
 
 export default function SocialProofSection() {
@@ -124,9 +95,22 @@ export default function SocialProofSection() {
         <p className="text-center text-slate-600 text-xs font-sans font-600 uppercase tracking-[0.2em] mb-10">
           {t.social.clientsLabel}
         </p>
-
+        <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10">
+          {clientLogos.map(({ Logo, name }, i) => (
+            <motion.div
+              key={name}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.05 }}
+              className="font-sans font-700 text-slate-600 hover:text-slate-400 text-lg tracking-tight transition-colors duration-200 cursor-default"
+            >
+              <Logo />
+            </motion.div>
+          ))}
+        </div>
         {/* Fade mask nas bordas */}
-        <div
+        {/* <div
           className="relative overflow-hidden"
           style={{
             maskImage:
@@ -151,7 +135,7 @@ export default function SocialProofSection() {
                 key={`${name}-${i}`}
                 className="
                   flex-shrink-0 flex items-center justify-center
-                  px-10 h-16 mx-2
+                  px-10 h-18 mx-2
                   text-slate-600
                   hover:text-slate-300
                   transition-colors duration-300
@@ -163,7 +147,7 @@ export default function SocialProofSection() {
               </div>
             ))}
           </motion.div>
-        </div>
+        </div> */}
       </motion.div>
     </SectionWrapper>
   )

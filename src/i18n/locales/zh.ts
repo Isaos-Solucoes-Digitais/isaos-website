@@ -109,7 +109,7 @@ const zh = {
     servicesTitle: '服务',
     companyTitle: '公司',
     contactTitle: '联系方式',
-    address: '安哥拉，罗安达\nViana，Vila de Viana',
+    address: '安哥拉罗安达\n美丽的绿区',
     rights: '版权所有。',
     privacy: '隐私政策',
     terms: '使用条款',
@@ -143,7 +143,7 @@ const zh = {
     hours: '营业时间',
     hoursVal: '周一至周五：8:00 - 18:00\n周六：9:00 - 13:00',
     mapTitle: '我们的位置',
-    mapSub: 'Vila de Viana 20号楼8号公寓，靠近消防局，Viana，罗安达 · 安哥拉',
+    mapSub: '绿区, 贝拉斯市政府，罗安达 · 安哥拉',
     mapBtn: '在 Google Maps 查看',
   },
   about: {

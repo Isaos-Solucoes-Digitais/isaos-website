@@ -47,7 +47,7 @@ export default function CtaSection() {
               <ArrowRight size={18} />
             </Button>
             <Button
-              href="https://wa.me/244923000000"
+              href="https://wa.me/244945036927"
               variant="secondary"
               size="lg"
               external

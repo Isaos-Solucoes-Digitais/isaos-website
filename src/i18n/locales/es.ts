@@ -140,7 +140,7 @@ const es = {
     servicesTitle: 'Servicios',
     companyTitle: 'Empresa',
     contactTitle: 'Contacto',
-    address: 'Luanda, Angola\nViana, Vila de Viana',
+    address: 'Luanda, Angola\nBelas, Zona Verde',
     rights: 'Todos los derechos reservados.',
     privacy: 'Privacidad',
     terms: 'Términos de Uso',
@@ -189,9 +189,7 @@ const es = {
     hoursVal: 'Lun–Vie: 8h a 18h\nSáb: 9h a 13h',
 
     mapTitle: 'Dónde estamos',
-    mapSub:
-      'Edificio Nº 20, apartamento 8, Vila de Viana, cerca de los Bomberos, Viana, Luanda · Angola',
-
+    mapSub:'Zona Verde, Municipio de Belas, Luanda · Angola',
     mapBtn: 'Ver en Google Maps',
   },
 

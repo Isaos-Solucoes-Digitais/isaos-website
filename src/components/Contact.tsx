@@ -14,8 +14,8 @@ export function Contact() {
 
   const contactInfo = [
     { icon: MapPin, title: c.location, lines: t.footer.address.split('\n') },
-    { icon: Mail, title: c.email, lines: ['info@isaos.ao', 'projetos@isaos.ao'] },
-    { icon: Phone, title: c.phone, lines: ['+244 923 000 000', '+244 912 000 000'] },
+    { icon: Mail, title: c.email, lines: ['info@isaos.ao', 'geral@isaos.ao'] },
+    { icon: Phone, title: c.phone, lines: ['+244 945 036 927', '+91 87908 07784'] },
     { icon: Clock, title: c.hours, lines: c.hoursVal.split('\n') },
   ]
 
@@ -75,7 +75,7 @@ export function Contact() {
 
             {/* WhatsApp CTA */}
             <a
-              href="https://wa.me/918790807784?text=Olá ISAOS! Gostaria de falar sobre um projecto."
+              href="https://wa.me/244945036927?text=Olá ISAOS! Gostaria de falar sobre um projecto."
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-4 p-5 rounded-2xl border border-green-500/20 bg-green-500/5 hover:bg-green-500/10 transition-colors group"
@@ -87,7 +87,7 @@ export function Contact() {
                 <div className="font-sans font-700 text-white text-sm group-hover:text-green-300 transition-colors">
                   {c.whatsappLabel}
                 </div>
-                <div className="text-slate-500 text-xs font-body">{c.whatsappSub} · +91 87908 07784</div>
+                <div className="text-slate-500 text-xs font-body">{c.whatsappSub} · +244 945 036 927</div>
               </div>
             </a>
           </motion.div>

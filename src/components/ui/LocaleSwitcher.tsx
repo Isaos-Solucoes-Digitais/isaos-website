@@ -4,10 +4,12 @@ import { useState, useRef, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Sun, Moon, ChevronDown, Globe } from 'lucide-react'
 import { useI18n, locales } from '@/i18n'
+import { useTheme } from '@/hooks/useTheme'
 
 
 export function LocaleSwitcher() {
   const { locale, setLocale, t } = useI18n()
+  const { theme, toggleTheme } = useTheme()
   const [open, setOpen] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
 
@@ -23,9 +25,25 @@ export function LocaleSwitcher() {
 
   return (
     <div className="flex items-center gap-2">
-     
-      {/* Language dropdown */}
-      <div ref={ref} className="relative">
+
+      {/* Theme toggle */}
+      {/* <button
+        onClick={toggleTheme}
+        aria-label={theme === 'dark' ? t.theme.light : t.theme.dark}
+        className="
+          w-9 h-9 flex items-center justify-center rounded-lg
+          border border-white/10 dark:border-white/10 light:border-black/10
+          text-slate-400 dark:text-slate-400 light:text-slate-600
+          hover:text-white dark:hover:text-white
+          hover:bg-white/5 dark:hover:bg-white/5 light:hover:bg-black/5
+          transition-all duration-200
+        "
+      >
+        {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
+      </button> */}
+
+       {/* Language dropdown */}
+       <div ref={ref} className="relative">
         <button
           onClick={() => setOpen(!open)}
           className="

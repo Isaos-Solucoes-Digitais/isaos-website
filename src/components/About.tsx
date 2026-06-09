@@ -12,8 +12,8 @@ const valueIcons = [Heart, Rocket, Users, Eye]
 const team = [
   { name: 'Osvaldo João', role: 'CEO & Co-fundador', initial: 'OJ', color: 'from-brand-500 to-brand-700' },
   { name: 'Dedaldino Daniel', role: 'CTO & Tech Lead', initial: 'DD', color: 'from-accent-500 to-accent-700' },
-  { name: 'Rossana Francisco', role: 'Diretora Comercial', initial: 'RF', color: 'from-purple-500 to-purple-700' },
-  { name: 'Beatriz Sousa', role: 'Head of Engineering', initial: 'BS', color: 'from-amber-500 to-amber-700' },
+  { name: 'Samuel Kieto', role: 'Head of Electronic Security', initial: 'SK', color: 'from-amber-500 to-amber-700' },
+  { name: 'Rossana Francisco', role: 'Assistente Comercial', initial: 'RF', color: 'from-purple-500 to-purple-700' },
 ]
 
 export const About = () => {

@@ -4,18 +4,12 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { SectionWrapper } from '@/components/common/SectionWrapper'
 import CtaSection from '@/components/sections/CtaSection'
-import { ExternalLink, Code2, Smartphone, Brain, MonitorCheck } from 'lucide-react'
+import { ExternalLink } from 'lucide-react'
 import { useI18n } from '@/i18n'
+import type { Project } from '@/types'
 
 
-const projects = [
-  { id: 1, title: 'BancAO Digital Banking', catKey: 'Web', description: 'Plataforma de banca digital completa com gestão de contas, transferências, pagamentos e relatórios em tempo real.', techs: ['Next.js', 'Node.js', 'PostgreSQL', 'Redis'], color: 'from-brand-600 to-brand-900', icon: Code2, result: 'Redução de 60% nas visitas às agências físicas' },
-  { id: 2, title: 'FreshMarket App', catKey: 'Mobile', description: 'Marketplace para compra e entrega de produtos frescos, conectando produtores locais a consumidores.', techs: ['React Native', 'Firebase', 'Stripe', 'Google Maps'], color: 'from-accent-600 to-accent-900', icon: Smartphone, result: '+2.000 utilizadores activos no primeiro mês' },
-  { id: 3, title: 'HealthPlus Patient AI', catKey: 'IA & Automação', description: 'Sistema de triagem inteligente para clínicas, utilizando IA para análise de sintomas.', techs: ['Python', 'TensorFlow', 'FastAPI', 'React'], color: 'from-purple-600 to-purple-900', icon: Brain, result: 'Redução de 40% no tempo médio de espera' },
-  { id: 4, title: 'SellAO Digital', catKey: 'Software de Gestão', description: 'Sistema de de gestão com controle de vendas, estoque e relatórios para empresa de vendas de automóveis.', techs: ['C#', 'Go', 'Entity Framework', 'SAP'], color: 'from-amber-600 to-amber-900', icon: MonitorCheck, result: 'Controle eficiente de operações e mais produtividade.' },
-  { id: 5, title: 'EduTech Angola LMS', catKey: 'Web', description: 'Plataforma de ensino online com cursos em vídeo, avaliações e certificados digitais.', techs: ['Next.js', 'Prisma', 'AWS S3', 'Stripe'], color: 'from-sky-600 to-sky-900', icon: Code2, result: 'Mais de 5.000 estudantes matriculados' },
-  { id: 6, title: 'LogiAO Fleet Management', catKey: 'Mobile', description: 'Gestão de frotas com rastreamento GPS em tempo real, optimização de rotas e controlo de combustível.', techs: ['Flutter', 'Go', 'Google Maps', 'PostgreSQL'], color: 'from-rose-600 to-rose-900', icon: Smartphone, result: 'Redução de 25% nos custos de combustível' },
-]
+const projects: Project [] = []
 
 
 export const Portfolio = () => {

@@ -140,7 +140,7 @@ const ja = {
     servicesTitle: 'サービス',
     companyTitle: '会社',
     contactTitle: 'お問い合わせ',
-    address: 'アンゴラ、ルアンダ\nヴィアナ、ヴィラ・デ・ヴィアナ',
+    address: 'アンゴラ、ルアンダ\n美しい、グリーンゾーン',
     rights: '全著作権所有。',
     privacy: 'プライバシー',
     terms: '利用規約',
@@ -190,9 +190,7 @@ const ja = {
     hoursVal: '月–金: 8時〜18時\n土: 9時〜13時',
 
     mapTitle: '所在地',
-    mapSub:
-      'ヴィアナ、消防署近く、ヴィラ・デ・ヴィアナ、20番ビル8号室、ルアンダ · アンゴラ',
-
+    mapSub:'ゾナ・ヴェルデ、ベラス市、ルアンダ · アンゴラ',
     mapBtn: 'Google Mapsで見る',
   },
 

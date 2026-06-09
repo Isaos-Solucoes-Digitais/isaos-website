@@ -44,7 +44,7 @@ export default function Footer() {
                 alt="ISAOS Soluções Digitais"
                 width={150}
                 height={50}
-                className="object-contain group-hover:scale-105 transition-transform duration-300"
+                className="h-25 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
               />
             </Link>
             <p className="text-slate-500 text-sm leading-relaxed mb-6 font-body">
@@ -126,10 +126,10 @@ export default function Footer() {
               <li className="flex items-center gap-3">
                 <Phone size={16} className="text-brand-400 flex-shrink-0" />
                 <a
-                  href="tel:+244923000000"
+                  href="tel:+244945036927"
                   className="text-slate-500 hover:text-brand-300 text-sm font-body transition-colors"
                 >
-                  +244 923 000 000
+                  +244 945 036 927
                 </a>
               </li>
             </ul>

@@ -7,23 +7,18 @@ import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import { useI18n } from '@/i18n'
+import { useTheme } from '@/hooks/useTheme'
 
 import { LocaleSwitcher } from '@/components/ui/LocaleSwitcher'
 import { Button } from '@/components/ui/Button'
 
-const navLinks = [
-  { label: 'Início', href: '/' },
-  { label: 'Sobre', href: '/about' },
-  { label: 'Serviços', href: '/services' },
-  { label: 'Portfólio', href: '/portfolio' },
-  { label: 'Contacto', href: '/contact' },
-]
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const pathname = usePathname()
   const { t } = useI18n()
+  const { theme } = useTheme()
 
   const navLinks = [
     { label: t.nav.home, href: '/' },
@@ -43,6 +38,8 @@ export default function Navbar() {
     setMobileOpen(false)
   }, [pathname])
 
+  const isLight = theme === 'light'
+
   return (
     <>
       <motion.header
@@ -50,7 +47,7 @@ export default function Navbar() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
-          ? 'glass border-b border-brand-500/20 shadow-2xl shadow-brand-900/20'
+          ? `glass border-b ${isLight ? 'border-black/8 shadow-lg shadow-black/5' : 'border-brand-500/20 shadow-2xl shadow-brand-900/20'}`
           : 'bg-transparent'
           }`}
       >
@@ -59,11 +56,11 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-3 group">
             <div className="relative overflow-visible">
               <Image
-                src="/logos/logo-horizontal.png"
+                src="/logos/logo-wthite-vertical-v22.png"
                 alt="ISAOS Soluções Digitais"
-                width={240}
+                width={220}
                 height={100}
-                className="h-20 w-auto object-contain -my-2 group-hover:scale-105 transition-transform duration-300"
+                className="h-10 w-auto object-contain -my-2 group-hover:scale-105 transition-transform duration-300"
                 priority
               />
             </div>
@@ -78,8 +75,10 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     className={`relative px-4 py-2 text-sm font-body font-500 rounded-lg transition-all duration-200 group ${isActive
-                      ? 'text-brand-300'
-                      : 'text-slate-400 hover:text-white'
+                      ? 'text-brand-400'
+                      : isLight
+                        ? 'text-slate-600 hover:text-slate-900'
+                        : 'text-slate-400 hover:text-white'
                       }`}
                   >
                     {isActive && (
@@ -107,7 +106,9 @@ export default function Navbar() {
             <LocaleSwitcher />
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className={`p-2 rounded-lg transition-colors text-slate-400 hover:text-white hover:bg-white/5`}
+              className={`p-2 rounded-lg transition-colors 
+                ${isLight ? 'text-slate-600 hover:text-slate-900 hover:bg-black/5' : 'text-slate-400 hover:text-white hover:bg-white/5'
+                }`}
               aria-label="Abrir menu"
             >
               {mobileOpen ? <X size={22} /> : <Menu size={22} />}
@@ -127,7 +128,7 @@ export default function Navbar() {
             className="fixed inset-0 z-40 md:hidden"
           >
             <div
-              className="absolute inset-0 bg-dark-900/95 backdrop-blur-xl"
+              className={`absolute inset-0 ${isLight ? 'bg-white/95' : 'bg-dark-900/95'} backdrop-blur-xl`}
               onClick={() => setMobileOpen(false)}
             />
             <div className="relative z-10 flex flex-col items-center justify-center h-full gap-2">
@@ -141,8 +142,8 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     className={`block px-8 py-4 text-2xl font-sans font-700 tracking-tight transition-colors ${pathname === link.href
-                      ? 'text-brand-300'
-                      : 'text-slate-400 hover:text-white'
+                      ? 'text-brand-400'
+                      : isLight ? 'text-slate-500 hover:text-slate-900' : 'text-slate-400 hover:text-white'
                       }`}
                   >
                     {link.label}
