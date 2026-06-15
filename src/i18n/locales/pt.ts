@@ -47,7 +47,7 @@ const pt = {
         description: 'Proteja o seu espaço com sistemas modernos de vigilância, incluindo câmeras (CCTV), cercas elétricas e monitoramento inteligente.',
       },
       {
-        title: 'Segurança Informática (Cybersecurity)',
+        title: 'Cybersecurity',
         description: 'Proteja o seu negócio com soluções licenciadas de segurança: antivírus corporativo, backup automatizado e ferramentas avançadas contra ameaças digitais.',
       },
       {
@@ -172,7 +172,7 @@ const pt = {
       { step: '03', title: 'Desenvolvimento', desc: 'Construção ágil com sprints de 2 semanas e demos regulares.' },
       { step: '04', title: 'Lançamento', desc: 'Deploy, testes, formação da equipa e suporte pós-lançamento.' },
     ],
-    categories: ['Todos', 'Web', 'Mobile', 'Software de Gestão', 'IA & Automação', 'Segurança Electrônica', 'CyberSegurança'],
+    categories: ['Todos', 'Web', 'Mobile', 'Software de Gestão', 'IA & Automação', 'Segurança Electrônica', 'Cybersecurity'],
   },
   serviceContent: {
     services: [
@@ -224,7 +224,7 @@ const pt = {
       },
       {
         id: 'cybersecurity',
-        title: 'CyberSegurança',
+        title: 'Cybersecurity',
         subtitle: 'Segurança digital',
         description:
           'Fornecemos e implementamos soluções de segurança digital através de licenças de software, incluindo antivírus corporativo, sistemas de backup e ferramentas de proteção contra ameaças cibernéticas.',
