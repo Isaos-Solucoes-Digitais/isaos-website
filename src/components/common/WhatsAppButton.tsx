@@ -6,7 +6,7 @@ export const WhatsAppButton = () => {
   
   return (
     <motion.a
-      href="https://wa.me/244945036927?text=Olá! Vim do website da ISAOS e gostaria de mais informações."
+      href="https://wa.me/244945036927?text=Olá,%20tenho%20interesse%20nos%20seus%20serviços"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Falar no WhatsApp"

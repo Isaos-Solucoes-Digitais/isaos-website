@@ -47,7 +47,7 @@ export default function CtaSection() {
               <ArrowRight size={18} />
             </Button>
             <Button
-              href="https://wa.me/244945036927"
+              href="https://wa.me/244945036927?text=Olá,%20tenho%20interesse%20nos%20seus%20serviços"
               variant="secondary"
               size="lg"
               external

@@ -1,14 +1,26 @@
 "use client"
 import Link from 'next/link'
 import Image from 'next/image'
-import { Mail, MapPin, Phone, Linkedin, Twitter, Instagram } from 'lucide-react'
+import { Mail, MapPin, Phone, Linkedin, Twitter, Instagram, Facebook } from 'lucide-react'
 import { useI18n } from '@/i18n'
 
 
 const socials = [
-  { icon: Linkedin, href: '#', label: 'LinkedIn' },
-  { icon: Twitter, href: '#', label: 'Twitter' },
-  { icon: Instagram, href: '#', label: 'Instagram' },
+  {
+    icon: Linkedin,
+    href: 'https://www.linkedin.com/company/127804029',
+    label: 'LinkedIn'
+  },
+  { 
+    icon: Facebook, 
+    href: 'https://www.facebook.com/profile.php?id=61565887146961', 
+    label: 'Twitter' 
+  },
+  {
+    icon: Instagram,
+    href: 'https://www.instagram.com/isaos_solucoes_digitais?igsh=d2Z0cnBuZ3YwY2Rl&utm_source=qr',
+    label: 'Instagram'
+  },
 ]
 
 export default function Footer() {
@@ -56,6 +68,9 @@ export default function Footer() {
                   key={label}
                   href={href}
                   aria-label={label}
+                  target="_blank"
+                  rel="noopener noreferrer"
+
                   className="w-9 h-9 flex items-center justify-center rounded-lg border border-white/10 text-slate-500 hover:text-white hover:border-brand-500/40 hover:bg-brand-500/10 transition-all duration-200"
                 >
                   <Icon size={16} />
@@ -117,10 +132,10 @@ export default function Footer() {
               <li className="flex items-center gap-3">
                 <Mail size={16} className="text-brand-400 flex-shrink-0" />
                 <a
-                  href="mailto:info@isaos.ao"
+                  href="mailto:info@isaossd.com"
                   className="text-slate-500 hover:text-brand-300 text-sm font-body transition-colors"
                 >
-                  info@isaos.ao
+                  info@isaossd.com
                 </a>
               </li>
               <li className="flex items-center gap-3">
