@@ -14,7 +14,7 @@ export function Contact() {
 
   const contactInfo = [
     { icon: MapPin, title: c.location, lines: t.footer.address.split('\n') },
-    { icon: Mail, title: c.email, lines: ['info@isaossd.com', 'geral@isaossd.com'] },
+    { icon: Mail, title: c.email, lines: ['info@isaos.ao', 'geral@isaos.ao'] },
     { icon: Phone, title: c.phone, lines: ['+244 945 036 927', '+91 87908 07784'] },
     { icon: Clock, title: c.hours, lines: c.hoursVal.split('\n') },
   ]
