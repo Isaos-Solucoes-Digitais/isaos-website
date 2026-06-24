@@ -1,0 +1,21 @@
+{
+  "name": "ISAOS Soluções Digitais",
+  "short_name": "ISAOS",
+  "description": "Soluções digitais que Transformam Negócios",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#05080f",
+  "theme_color": "#0a6fe8",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

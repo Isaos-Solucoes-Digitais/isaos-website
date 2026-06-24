@@ -46,7 +46,7 @@ export const siteConfig = {
     },
   },
   // Imagens usadas em Open Graph / Twitter Cards / JSON-LD
-  ogImage: '/og-image.jpg',     // 1200x630
+  ogImage: '/og-image.png',     // 1200x630
   logo: '/logos/logo-gradient-horizontal.jpeg',
   logoSquare: '/logos/logo-gradient-vertical.jpeg', // usado em JSON-LD Organization
 } as const
