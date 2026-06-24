@@ -1,11 +1,25 @@
-import type { Metadata } from 'next'
+import { buildMetadata } from '@/lib/seo'
+import { JsonLd, breadcrumbSchema } from '@/lib/jsonld'
 import { Portfolio } from '@/components/Portfolio'
 
-export const metadata: Metadata = {
-  title: 'Portfólio',
-  description: 'Conheça os projectos desenvolvidos pela ISAOS — soluções web, mobile e empresariais que transformaram negócios angolanos.',
-}
+export const metadata = buildMetadata({
+  title: 'Portfólio — Projectos de Sucesso',
+  description:
+    'Conheça os projectos desenvolvidos pela ISAOS. Casos de sucesso em Angola.',
+  path: '/portfolio',
+  keywords: ['portfólio software house Angola', 'casos de sucesso tecnologia Angola', 'projectos web Luanda'],
+})
 
 export default function PortfolioPage() {
-  return <Portfolio />
+  return (
+    <>
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: 'Início', path: '' },
+          { name: 'Portfólio', path: '/portfolio' },
+        ])}
+      />
+      <Portfolio />
+    </>
+  )
 }
