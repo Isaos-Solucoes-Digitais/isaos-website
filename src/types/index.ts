@@ -21,3 +21,9 @@ export interface Testimonial {
   text: string;
 }
 
+export interface ISocial {
+  instagram: string;
+  facebook: string;
+  linkedin: string;
+  twitter: string;
+}
