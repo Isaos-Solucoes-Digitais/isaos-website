@@ -95,8 +95,7 @@ export const metadata: Metadata = {
   },
   manifest: '/site.webmanifest',
   verification: {
-    // ⚠️ substituir pelos códigos reais ao registar no Google Search Console / Bing
-    google: 'GOOGLE_SEARCH_CONSOLE_VERIFICATION_CODE',
+    google: '82WHQbaiKbcft2lg6KRmBVnhd_uVqfYw8WCiXARDZ9Q',
     other: { 'msvalidate.01': 'BING_WEBMASTER_VERIFICATION_CODE' },
   },
   category: 'technology',
